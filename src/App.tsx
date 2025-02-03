@@ -1,9 +1,12 @@
 import './App.css'
+import Header from './shared/Header'
 
 function App() {
 
   return (
-    <div className='text-6xl'>Real Estate App</div>
+    <div className='text-6xl'>
+      <Header/>
+    </div>
   )
 }
 
