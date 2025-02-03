@@ -1,0 +1,63 @@
+.card-container {
+  width: 363px;
+  height: 247px;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
+}
+.card-name {
+  font-family: "Tajawal";
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+}
+.card-name,
+.card-price {
+  color: rgba(194, 144, 98, 1);
+}
+
+.card-price {
+  font-family: "Tajawal";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.card-description {
+  font-family: "Tajawal";
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: center;
+  color: black;
+}
+
+.card-subdescription {
+  font-family: "Tajawal";
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+}
+
+.offer-btn,
+.offer-accept-btn,
+.offer-refuse-btn {
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  border-radius: 10px;
+  /* padding: 3px 5px; */
+}
+
+.offer-btn {
+  background-color: rgba(194, 144, 98, 1);
+}
+.offer-accept-btn {
+  background: linear-gradient(to right, rgba(69, 237, 10, 1), rgba(0, 0, 0, 1));
+}
+
+.offer-refuse-btn {
+  background: linear-gradient(to right, rgba(255, 0, 0, 1), rgba(0, 0, 0, 1));
+}

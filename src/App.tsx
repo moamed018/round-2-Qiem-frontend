@@ -1,18 +1,18 @@
-import './App.css'
-import Header from './shared/Header'
-import Sidebar from './shared/Sidebar'
+import "./App.css";
+import ClientHomePage from "./client/pages/HomePage";
+import Header from "./shared/Header";
+import Sidebar from "./shared/Sidebar";
 
 function App() {
-
   return (
-    <section className='text-6xl'>
+    <section>
       <Header />
-      <main className='flex '>
-        <div className='w-[100%] '></div>
-      <Sidebar/>
+      <main className="flex">
+        <ClientHomePage />
+        <Sidebar />
       </main>
     </section>
-  )
+  );
 }
 
-export default App
+export default App;
