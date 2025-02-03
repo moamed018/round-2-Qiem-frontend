@@ -1,0 +1,84 @@
+/* Main Header Styling */
+.main-header {
+  background: linear-gradient(
+    to right,
+    rgba(194, 144, 98, 1),
+    rgba(0, 0, 0, 1)
+  );
+}
+
+/* Dashboard Header Font Styling */
+.dashboard-header {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.5; /* ~24px */
+  color: white; /* Ensures readability */
+  position: relative;
+}
+
+.dashboard-header::after {
+  content: "";
+  position: absolute;
+  right: -20px;
+ top: 50%; 
+  transform: translateY(-50%); 
+  width: 2px;
+  height: 40px;
+  border-radius: 18px;
+  background: linear-gradient(
+    rgba(238, 236, 250, 0),
+    rgba(249, 249, 249, 1),
+    rgba(238, 236, 250, 0)
+  );
+}
+
+/* Search Input Placeholder Styling */
+.input-search {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 19.5px;
+  color: rgba(194, 144, 98, 1);
+}
+
+/* Icon Styling */
+.icon,
+.notifications-icon,
+.search-main::placeholder {
+  color: rgba(194, 144, 98, 1);
+}
+.notifications-icon {
+  width: 32px;
+  height: 35px;
+}
+
+.notifications-icon-container {
+  background-color: rgba(224, 224, 224, 0.15); /* Light grey background */
+  width: 56px;
+  height: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease;
+}
+
+.notifications-icon-container:hover {
+  opacity: 1; /* Full opacity on hover */
+}
+
+/* Input Field Focus Styling */
+.search-main:focus {
+  border: none;
+  outline: none;
+}
+
+.username {
+    font-family: "Tajawal";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    text-align: right;
+
+}
