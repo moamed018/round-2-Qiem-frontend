@@ -7,12 +7,14 @@ import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 interface InputPasswordProps
     extends React.InputHTMLAttributes<HTMLInputElement> {
     error?: string;
+    placeholder?: string;
 }
 
 export default function InputPassword({
     className,
     error,
     onChange,
+    placeholder,
     ...props
 }: InputPasswordProps) {
     const [isPasswordVisible, setIsPasswordVisible] = useState<boolean>(false);
@@ -35,7 +37,7 @@ export default function InputPassword({
         <div className="relative">
             <Input
                 icon={TfiLock}
-                placeholder="كلمة المرور"
+                placeholder={placeholder || "كلمة المرور"}
                 type={isPasswordVisible ? "text" : "password"}
                 value={password}
                 onChange={handlePasswordChange}
