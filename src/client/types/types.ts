@@ -5,3 +5,8 @@ export interface CardProps {
   homeDescription1: string;
   homeDescription2: string;
 }
+
+export interface OfferDetails {
+  companyName: string;
+  homePrice: string;
+}
