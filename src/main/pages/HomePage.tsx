@@ -15,6 +15,9 @@ function HomePage() {
                     <LinkButton to="/register" className="text-5xl" fullRounded>
                         Register
                     </LinkButton>
+                    <LinkButton to="/client/offers" className="text-5xl" fullRounded>
+                        Client-Offers
+                    </LinkButton>
                 </div>
             </main>
         </section>
