@@ -48,7 +48,8 @@ export default function InputPassword({
             <button
                 type="button"
                 onClick={togglePasswordVisibility}
-                className="absolute top-2.5 left-4 opacity-90"
+                className="absolute top-2.5 left-4 opacity-90 "
+                tabIndex={-1}
             >
                 {isPasswordVisible ? (
                     <AiOutlineEyeInvisible className="w-[30px] h-[30px] " />

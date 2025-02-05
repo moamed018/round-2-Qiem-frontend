@@ -12,6 +12,7 @@ import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";
 import ForgotPassword from "./main/pages/ForgotPassword";
+import SettingsPage from "./shared/SettingsPage";
 
 function App() {
     return (
@@ -31,10 +32,10 @@ function App() {
                     <Route path="reviewer/" element={<Reviewer />} />
                     <Route path="company/" element={<Company />} />
                 </Route>
+                <Route path="/settings" element={<SettingsPage />} />
             </Routes>
         </BrowserRouter>
     );
-
 }
 
 export default App;
