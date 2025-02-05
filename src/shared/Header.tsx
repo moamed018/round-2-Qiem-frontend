@@ -33,7 +33,7 @@ function Header() {
           <h2 className="text-lg text-white username">Ahmed Mohamed</h2>
           <img
             className="w-[50px] h-[50px] rounded-full "
-            src="/src/assets/image.png"
+            src="/src/assets/avatar.png"
             alt="avatar"
           />
         </div>
