@@ -8,7 +8,7 @@ import InputPassword from "../Ui/InputPassword";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import Button from "../Ui/Button";
-import { useNavigate } from "react-router";
+import { Link, useNavigate } from "react-router";
 
 export default function Login() {
     const navigate = useNavigate();
@@ -94,12 +94,12 @@ export default function Login() {
                         </Button>
                     </div>
 
-                    <a
-                        href="#"
+                    <Link
+                        to="/forgot-password"
                         className="text-black sm:text-xl text-lg font-bold block text-center"
                     >
                         هل نسيت كلمة المرور ؟
-                    </a>
+                    </Link>
                 </form>
             </section>
 

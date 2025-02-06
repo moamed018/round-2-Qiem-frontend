@@ -8,7 +8,6 @@ import { BiSolidOffer } from "react-icons/bi";
 import { SiCarrd } from "react-icons/si";
 import { MdOutlinePolicy } from "react-icons/md";
 import { Link } from "react-router-dom";
-import "./style/Sidebar.css";
 
 function Sidebar() {
   return (
@@ -64,7 +63,6 @@ function Sidebar() {
             تسجيل الخروج
           </Link>
         </div>
-        {/* Add more sidebar items here */}
       </section>
     </section>
   );
