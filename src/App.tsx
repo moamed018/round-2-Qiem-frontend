@@ -13,6 +13,9 @@ import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";
 import ForgotPassword from "./main/pages/ForgotPassword";
 import SettingsPage from "./shared/SettingsPage";
+import SettingsReviewer from "./reviewer/pages/SettingsReviewer";
+import SettingsClient from "./client/pages/SettingsClient";
+import SettingsCompany from "./company/pages/SettingsCompany";
 
 function App() {
     return (
@@ -20,6 +23,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<HomePage />} />
 
+                {/*//* Login & Logout & Register */}
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/register/" element={<RegisterOutlet />}>
@@ -32,6 +36,23 @@ function App() {
                     <Route path="reviewer/" element={<Reviewer />} />
                     <Route path="company/" element={<Company />} />
                 </Route>
+
+                {/*//* Reviewer */}
+                <Route path="reviewer/" element={""}>
+                    <Route path="settings/" element={<SettingsReviewer />} />
+                </Route>
+
+                {/*//* Client */}
+                <Route path="client/" element={""}>
+                    <Route path="settings/" element={<SettingsClient />} />
+                </Route>
+
+                {/*//* Company */}
+                <Route path="company/" element={""}>
+                    <Route path="settings/" element={<SettingsCompany />} />
+                </Route>
+
+                {/*//! For Development only  */}
                 <Route path="/settings" element={<SettingsPage />} />
             </Routes>
         </BrowserRouter>
