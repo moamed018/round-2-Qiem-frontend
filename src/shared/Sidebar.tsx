@@ -7,6 +7,7 @@ import { MdOutlinePayment } from "react-icons/md";
 import { BiSolidOffer } from "react-icons/bi";
 import { SiCarrd } from "react-icons/si";
 import { MdOutlinePolicy } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 
 function Sidebar() {
@@ -46,9 +47,9 @@ function Sidebar() {
           <MdOutlinePolicy className="sidebar-icon" />
         </div>
         <div className="sidebar-item">
-          <a href="#" className="sidebar-link">
+          <Link to="/terms-and-conditions" className="sidebar-link">
             شروط واحكام
-          </a>
+          </Link>
           <IoMdHome className="sidebar-icon" />
         </div>
         <div className="sidebar-item">
