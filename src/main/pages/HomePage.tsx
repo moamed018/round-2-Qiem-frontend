@@ -13,7 +13,7 @@ function HomePage() {
     return (
         <section className="text-6xl">
             <Header />
-            <main className="flex ">
+            <main className="flex">
                 <Sidebar />
                 <div className="flex flex-col grow-2 items-center justify-center h-screen space-y-5">
                     <LinkButton to="/login" className="text-5xl" fullRounded>
@@ -23,15 +23,20 @@ function HomePage() {
                         Register
                     </LinkButton>
 <<<<<<< HEAD
+<<<<<<< HEAD
                     <LinkButton to="/client/offers" className="text-5xl" fullRounded>
                         Client-Offers
                     </LinkButton>
 =======
 
+=======
+                    <LinkButton to="/client/offers" className="text-5xl" fullRounded>
+                        Client-Offers
+                    </LinkButton>
+>>>>>>> f8a1e6a3b8c820033d185e26e1d048af2edef77c
                     <LinkButton to="/settings" className="text-5xl" fullRounded>
                         Settings Page for All
                     </LinkButton>
-
                     <Button
                         onClick={() => setOpenModal(true)}
                         className="text-5xl"
@@ -39,9 +44,8 @@ function HomePage() {
                     >
                         Log Out
                     </Button>
-
                     <Modal
-                        isOpen={openModal === true}
+                        isOpen={openModal}
                         Icon={FaUserAlt}
                         onClose={() => {
                             console.log("closed modal");
@@ -73,7 +77,10 @@ function HomePage() {
                             </>
                         }
                     />
+<<<<<<< HEAD
 >>>>>>> 115565764da8a3716fc4320dcf2300ffac7c23ba
+=======
+>>>>>>> f8a1e6a3b8c820033d185e26e1d048af2edef77c
                 </div>
             </main>
         </section>
