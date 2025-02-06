@@ -1,39 +1,30 @@
 .card-container{
         width: 100%;
-        
-        /* border: 1px solid #000; */
 }
 
 .card-content{
-        width: 1064px;
         color: #fff;
         box-shadow: 0px 2px 12px 7px #0000000D;
 }
 
 .card-content img{
-        width: 199px;
-        height: 167px;        
+        /* height: 167px;         */
         box-shadow: 0px 0px 8px 5px #00000040;
 }
 
-.c-company{
+.definition-section{
         height: 167px;
 }
 
-.c-company h5{
+.definition-section h5{
         font-family: "Tajawal";
         font-size: 30px;
         font-weight: 800;
-        line-height: 36px;
         text-align: right;
-        text-underline-position: "from-font";
-        text-decoration-skip-ink: none;
         color: var(--main-color, #C29062);
 }
 
-.c-company p{
-        width: 806px;
-        height: 116px;
+.definition-section p{
         font-family: "Tajawal";
         font-size: 25px;
         font-weight: 500;
