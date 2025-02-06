@@ -5,6 +5,7 @@ interface LinkButtonProps {
     className?: string;
     fullRounded?: boolean;
     children: React.ReactNode;
+    onClick?: () => void;
 }
 
 export default function LinkButton({
@@ -12,6 +13,7 @@ export default function LinkButton({
     children,
     className = "",
     fullRounded = false,
+    ...props
 }: LinkButtonProps) {
     return (
         <Link
@@ -19,6 +21,7 @@ export default function LinkButton({
             className={`bg-[#C29062] !text-white py-3 px-5 hover:opacity-80 transition-all duration-500 ${className} ${
                 fullRounded ? "rounded-full" : "rounded-2xl"
             }`}
+            {...props}
         >
             {children}
         </Link>
