@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+// import React from "react";
+>>>>>>> 115565764da8a3716fc4320dcf2300ffac7c23ba
 import Card from "./Card";
 import { cardDetails } from "../data";
 import { Link } from "react-router-dom";
