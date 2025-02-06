@@ -1,4 +1,4 @@
-import React from 'react'
+
 import '../styles/ShowRequest.css'
 
 function ShowRequest() {
@@ -9,7 +9,7 @@ function ShowRequest() {
       <div className='card-content px-5 py-8 mt-16 mr-8 rounded-md w-5/6'>
         
         {/* content-section */}
-        <div className=' flex mb-2'>
+        <div className=' flex mb-2 max-sm:mb-24 max-md:mb-12'>
         {/* image */}
         <div className='ml-8 w-1/5 '>
           <img src='/src/assets/samsungcompany.jpeg' className='rounded-sm drop-shadow-lg h-full'/>
