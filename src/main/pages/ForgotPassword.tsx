@@ -10,6 +10,10 @@ import * as Yup from "yup";
 import Button from "../Ui/Button";
 import InputPassword from "../Ui/InputPassword";
 import { useNavigate } from "react-router";
+import ErrorAlert from "../Ui/ErrorAlert";
+
+import { FaCheck } from "react-icons/fa";
+import Modal from "../../shared/Modal";
 
 const EmailStep = ({ onNext }: { onNext: (email: string) => void }) => {
     const formik = useFormik({
@@ -25,8 +29,14 @@ const EmailStep = ({ onNext }: { onNext: (email: string) => void }) => {
     return (
         <form
             onSubmit={formik.handleSubmit}
-            className="sm:w-8/10 w-full mx-auto mt-10"
+            className="sm:w-8/10 w-full mx-auto mt-4"
         >
+            {/*//! Development Only */}
+            <p className="mb-2 text-blue-900">
+                لاغراض التجربة والتطوير فقط ادخل البريد التالي:{" "}
+                <b>tech@cell.com</b>
+            </p>
+
             <Input
                 icon={CiMail}
                 placeholder="البريد الالكتروني"
@@ -133,10 +143,20 @@ const OtpStep = ({ onNext }: { onNext: (otp: string) => void }) => {
             onSubmit={handleSubmit}
             className="flex flex-col items-center gap-4"
         >
+            {/*//! Development Only */}
+            <p className="mb-2 text-blue-900 self-start">
+                لاغراض التجربة والتطوير فقط ادخل الكود التالي:{" "}
+                <b>0 0 0 0 0 0</b>
+            </p>
+
+            <label htmlFor={`id-${ind}`} className="self-start text-lg ps-2">
+                ادخل الكود الذي تم ارساله الي بريدك الالكتروني:
+            </label>
             <div className="flex gap-2 flex-row-reverse justify-center">
                 {formik.values.otp.map((value, index) => (
                     <input
                         key={index}
+                        id={`id-${index}`}
                         type="text"
                         maxLength={1}
                         value={value}
@@ -147,15 +167,14 @@ const OtpStep = ({ onNext }: { onNext: (otp: string) => void }) => {
                         className={`w-12 h-12 text-center border rounded-md text-xl focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                             ind === index
                                 ? "ring-2 ring-blue-500 "
-                                : "opacity-30 pointer-events-none"
+                                : "opacity-30 pointer-events-none ring-2 ring-blue-300 "
                         } ${
                             formik.errors.otp && formik.errors.otp[index]
                                 ? "border-red-500"
                                 : "border-gray-300"
-                        }
-
-                        `}
+                        }`}
                         autoFocus={index === 0}
+                        tabIndex={-1}
                     />
                 ))}
             </div>
@@ -242,32 +261,47 @@ export default function ForgotPassword() {
     const navigate = useNavigate();
     const [step, setStep] = useState(1);
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     const [otp, setOtp] = useState("");
+    const [error, setError] = useState("");
+    const [openModal, setOpenModal] = useState<boolean>(false);
 
     const handleEmailSubmit = (email: string) => {
         setEmail(email);
-        setStep(2);
+        if (email.toLowerCase() === "tech@cell.com") {
+            setStep(2);
+            setError("");
+        } else {
+            setError("البريد الالكتروني غير موجود");
+        }
     };
 
     const handleOtpSubmit = (otp: string) => {
         setOtp(otp);
-        setStep(3);
+        if (otp === "000000") {
+            setStep(3);
+            setError("");
+        } else {
+            setError("الكود غير صحيح");
+        }
     };
 
     const handlePasswordSubmit = (password: string) => {
-        alert(
-            "هذه تجربة لمهمة تغيير الباسورد اذا ضغطت علي حسنا سيتم نقلك الي الصفحة الرئيسية وهذه هي البيانات التي قمتَ بتسجيلها:\n" +
-                `البريد الالكتروني: ${email}\n` +
-                `كلمة المرور: ${password}\n` +
-                `الرقم السري: ${otp}`
-        );
-        navigate("/");
+        setOpenModal(true);
+        setPassword(password);
+        // console.log(
+        //     "هذه تجربة لمهمة تغيير الباسورد اذا ضغطت علي حسنا سيتم نقلك الي الصفحة الرئيسية وهذه هي البيانات التي قمتَ بتسجيلها:\n" +
+        //         `البريد الالكتروني: ${email}\n` +
+        //         `كلمة المرور: ${password}\n` +
+        //         `الرقم السري: ${otp}`
+        // );
     };
     return (
         <div className="flex md:flex-row flex-col">
             <LinkButton
-                to="/login"
+                to={step === 1 ? "/login" : ""}
                 className="absolute left-5 top-3 font-bold text-md flex gap-2 items-center"
+                onClick={() => setStep((perv) => perv - 1)}
             >
                 عودة
                 <FaArrowLeftLong className="w-[20px] h-[20px]" />
@@ -277,9 +311,11 @@ export default function ForgotPassword() {
                 <div className="sm:w-4/10 w-7/10 mx-auto mb-3">
                     <img src={LoginImage} alt="login" className="w-full" />
                 </div>
-                <h2 className="text-[#C29062] sm:text-3xl text-4xl text-center font-bold mb-3">
+                <h2 className="text-[#C29062] sm:text-3xl text-4xl text-center font-bold mb-8">
                     هل نسيت كلمة المرور ؟
                 </h2>
+
+                {error && <ErrorAlert message={error} />}
 
                 {step === 1 && <EmailStep onNext={handleEmailSubmit} />}
                 {step === 2 && <OtpStep onNext={handleOtpSubmit} />}
@@ -302,6 +338,38 @@ export default function ForgotPassword() {
                     تسجــيــل
                 </LinkButton>
             </section>
+
+            <Modal
+                isOpen={openModal === true}
+                Icon={FaCheck}
+                onClose={() => {
+                    console.log("closed modal");
+                    setOpenModal(false);
+                    navigate("/");
+                }}
+                title="تاكيد"
+                description={
+                    "سيتم نقلك الي الصفحة الرئيسية ولاغراض تجريبية هذه البيانات التي قمتَ بتسجيلها " +
+                    `(البريد الالكتروني: ${email}) ` +
+                    `(الرقم السري: ${otp}) ` +
+                    `(كلمة المرور: ${password})`
+                }
+                type="info"
+                actions={
+                    <>
+                        <Button
+                            onClick={() => {
+                                setOpenModal(false);
+                                navigate("/");
+                                // console.log("تم الخروج");
+                            }}
+                            className="px-12 rounded-md text-xl font-bold bg-green-800 "
+                        >
+                            حسنا
+                        </Button>
+                    </>
+                }
+            />
         </div>
     );
 }
