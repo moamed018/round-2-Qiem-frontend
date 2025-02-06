@@ -3,17 +3,16 @@ import { IoMdHome } from "react-icons/io";
 import { MdGroups } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RxExit } from "react-icons/rx";
-import { MdOutlinePayment } from "react-icons/md";
+// import { MdOutlinePayment } from "react-icons/md";
 import { BiSolidOffer } from "react-icons/bi";
 import { SiCarrd } from "react-icons/si";
 import { MdOutlinePolicy } from "react-icons/md";
 import { Link } from "react-router-dom";
 
-
 function Sidebar() {
-  return (
-    <section className="sidebar-main">
-      <h1 className="sidebar-header">QAIM - قيم</h1>
+    return (
+        <section className="sidebar-main">
+            <h1 className="sidebar-header">QAIM - قيم</h1>
 
       <section className="sidebar-content">
         <div className="sidebar-item">

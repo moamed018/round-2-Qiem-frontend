@@ -1,27 +1,40 @@
-import "./App.css";
-import TermsAndConditions from "./client/components/terms_and_conditions";
-import ClientHomePage from "./client/pages/HomePage";
-import Header from "./shared/Header";
-import Sidebar from "./shared/Sidebar";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router";
+import HomePage from "./main/pages/HomePage";
 
+import "./App.css";
+import Login from "./main/pages/Login";
+import RegisterHome from "./main/pages/RegisterHome";
+import Clients from "./main/pages/Clients";
+import RegisterOutlet from "./main/pages/RegisterOutlet";
+import ClientsOutlet from "./main/pages/ClientsOutlet";
+import Client from "./main/pages/Client";
+import ClientCompany from "./main/pages/ClientCompany";
+import Reviewer from "./main/pages/Reviewer";
+import Company from "./main/pages/Company";
+import ForgotPassword from "./main/pages/ForgotPassword";
 
 function App() {
-  return (
-    <Router>
-      <section>
-      <Header />
-      <main className="flex flex-row-reverse">
-        <ClientHomePage />
-        <Sidebar />
-      </main>
-      <Routes>
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        </Routes>
-    </section>
-    </Router>
-    
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<HomePage />} />
+
+                <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/register/" element={<RegisterOutlet />}>
+                    <Route path="" element={<RegisterHome />} />
+                    <Route path="clients/" element={<ClientsOutlet />}>
+                        <Route path="" element={<Clients />} />
+                        <Route path="client/" element={<Client />} />
+                        <Route path="company/" element={<ClientCompany />} />
+                    </Route>
+                    <Route path="reviewer/" element={<Reviewer />} />
+                    <Route path="company/" element={<Company />} />
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
+
 }
 
 export default App;
