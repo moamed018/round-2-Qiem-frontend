@@ -12,8 +12,8 @@
   font-family: "tajawal", sans-serif;
   font-weight: 800;
   font-size: 32px;
-  line-height: 30px;
-  letter-spacing: -1px;
+  line-height: 39px;
+  /* letter-spacing: -1px; */
   color: rgba(194, 144, 98, 1);
   text-align: center;
   width: 100%;
@@ -28,7 +28,6 @@
 .sidebar-item {
   display: flex;
   align-items: center;
-  justify-content: end;
   gap: 5px;
 }
 
