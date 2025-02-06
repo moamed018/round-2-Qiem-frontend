@@ -1,0 +1,62 @@
+.offer-detail-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 2px 12px 7px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+}
+
+.details .price {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: right;
+  color: rgba(139, 148, 198, 1);
+}
+
+.offer-detail-container .nav,
+.details .title {
+  font-family: "Tajawal";
+  color: rgba(194, 144, 98, 1);
+  text-align: right;
+}
+.offer-detail-container .nav {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+}
+.details .title {
+  font-weight: 800;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.details .description {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 30px;
+  text-align: right;
+  color: rgba(0, 0, 0, 1);
+}
+
+.details .file-download {
+  background-color: rgba(226, 232, 230, 1);
+  border-radius: 2px;
+  width: 240px;
+  height: 95px;
+}
+
+.file-download .file-text {
+  color: rgba(194, 144, 98, 1);
+  font-weight: 700;
+  font-size: 20px;
+  text-align: right;
+  line-height: 24px;
+
+}

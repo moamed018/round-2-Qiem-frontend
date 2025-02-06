@@ -5,7 +5,7 @@ import { IoIosSearch } from "react-icons/io";
 
 function Header() {
   return (
-    <section className="flex justify-between px-10 h-[80px] items-center main-header">
+    <section dir="ltr"  className="flex  justify-between px-10 h-[80px] items-center main-header">
       <h2 className="text-white dashboard-header">Dashboard</h2>
 
       {/* Search Bar Container */}
