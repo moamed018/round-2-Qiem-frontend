@@ -1,5 +1,5 @@
 import { Outlet } from "react-router-dom";
-import Cards from "../components/Cards";
+import Cards from "../components/OfferCards";
 import "../style/HomePage.css";
 
 function Offers() {

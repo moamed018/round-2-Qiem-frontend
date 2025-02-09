@@ -5,3 +5,74 @@
   font-family: "tajawal";
   color: rgba(194, 144, 98, 1);
 }
+
+#home-page-header {
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 36px;
+  text-align: right;
+  font-family: "tajawal";
+  color: rgba(194, 144, 98, 1);
+}
+
+@media (max-width: 1024px) {
+  #home-page-header {
+    font-size: 24px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  #home-page-header {
+    font-size: 16px;
+    line-height: 14px;
+  }
+}
+
+#home-card-container {
+  box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.25);
+}
+#home-card-header {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: right;
+  font-family: "tajawal";
+  color: rgba(194, 144, 98, 1);
+}
+
+#home-card-address {
+  font-weight: 700;
+  font-size: 13px;
+  line-height: 16px;
+  text-align: right;
+  color: rgba(0, 0, 0, 1);
+}
+
+#home-card-description {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: right;
+  color: rgba(139, 148, 198, 1);
+}
+#home-page-btns {
+}
+#home-page-btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 22px;
+  background: linear-gradient(
+    to right,
+    rgba(194, 144, 98, 1),
+    rgba(0, 0, 0, 1)
+  );
+  border-radius: 10px;
+  padding: 10px 25px;
+}

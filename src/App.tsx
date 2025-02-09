@@ -28,6 +28,8 @@ import SettingsReviewer from "./reviewer/pages/SettingsReviewer";
 import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
 
+import ClientHomePage from "./client/pages/ClientHomePage";
+
 function App() {
   return (
     <BrowserRouter>
@@ -50,6 +52,7 @@ function App() {
 
         {/* Client Routes */}
         <Route path="/client" element={<ClientLayout />}>
+          <Route path="home" element={<ClientHomePage/>}/>
           <Route path="offers" element={<Offers />} />
           <Route path="offers/:id" element={<Offer />} />
           <Route path="add-property" element={<CreateProperty />} />
@@ -59,6 +62,8 @@ function App() {
           <Route path="terms-conditions" element={<Conditions />} />
           <Route path="settings" element={<SettingsClient />} /> {/* From Mohamed */}
         </Route>
+        {/* End Client Routes  */}
+
         
         {/*//* Company */}
         <Route path="company/" element={""}>
@@ -77,5 +82,5 @@ function App() {
     </BrowserRouter>
   );
 }
-
+ 
 export default App;

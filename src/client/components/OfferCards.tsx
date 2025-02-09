@@ -1,4 +1,4 @@
-import Card from "./Card";
+import Card from "./OffrCard";
 import { cardDetails } from "../data";
 import { Link } from "react-router-dom";
 

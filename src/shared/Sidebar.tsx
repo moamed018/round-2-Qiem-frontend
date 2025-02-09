@@ -17,7 +17,7 @@ function Sidebar() {
       <section className="sidebar-content">
         <div className="sidebar-item">
           <IoMdHome className="sidebar-icon" />
-          <Link to="/" className="sidebar-link">
+          <Link to="/client/home" className="sidebar-link">
             الرئيسية
           </Link>
         </div>
