@@ -15,16 +15,16 @@ import ForgotPassword from "./main/pages/ForgotPassword";
 import SettingsPage from "./shared/SettingsPage";
 
 function App() {
-    return (
+  return (
+   
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<HomePage />} />
-
                 <Route path="/login" element={<Login />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/register/" element={<RegisterOutlet />}>
                     <Route path="" element={<RegisterHome />} />
-                    <Route path="clients/" element={<ClientsOutlet />}>
+                    <Route path="clients/" element={<ClientsOutlet />} >
                         <Route path="" element={<Clients />} />
                         <Route path="client/" element={<Client />} />
                         <Route path="company/" element={<ClientCompany />} />
