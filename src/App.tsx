@@ -24,6 +24,7 @@ import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";
 import ForgotPassword from "./main/pages/ForgotPassword";
 import SettingsPage from "./shared/SettingsPage";
+import ClientHomePage from "./client/pages/ClientHomePage";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
 
         {/* Client Routes */}
         <Route path="/client" element={<ClientLayout />}>
+          <Route path="home" element={<ClientHomePage/>}/>
           <Route path="offers" element={<Offers />} />
           <Route path="offers/:id" element={<Offer />} />
           <Route path="add-property" element={<CreateProperty />} />
@@ -50,6 +52,7 @@ function App() {
           <Route path="terms-conditions" element={<Conditions />} />
           <Route path="settings" element={<Settings />} />
         </Route>
+        {/* End Client Routes  */}
 
         <Route path="/reviewer" element={<Reviewer />} />
         <Route path="/company" element={<Company />} />
