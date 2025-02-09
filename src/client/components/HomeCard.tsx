@@ -19,11 +19,11 @@ function HomeCard() {
         </p>
       </div>
       <div id="home-page-btns" className="flex gap-3">
-        <button id="home-page-btn">
+        <button id="home-page-btn-accept" type="button">
           <p>تعديل</p>
           <CiEdit className="w-[30px] h-[30px] font-extrabold"/>
         </button>
-        <button id="home-page-btn">
+        <button id="home-page-btn-delte" type="button">
           <p>حذف</p>
           <IoClose className="w-[30px] h-[30px] font-extrabold"/>
         </button>
