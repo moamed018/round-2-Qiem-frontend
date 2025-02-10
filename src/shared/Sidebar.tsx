@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 
 function Sidebar() {
   return (
-    <section dir="rtl" className="sidebar-main">
+    <section dir="rtl" className="sidebar-main ">
       <h1 className="sidebar-header">قيم-QAIM</h1>
 
       <section className="sidebar-content">
