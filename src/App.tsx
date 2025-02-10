@@ -13,8 +13,7 @@ import ClientLayout from "./client/ClientLayout";
 import Offers from "./client/pages/Offers";
 import Offer from "./client/pages/Offer";
 import CreateProperty from "./client/pages/CreateProperty";
-import Requests from "./client/pages/Requests";
-import Request from "./client/pages/Request";
+import Requests from "./client/pages/RequestsPage";
 import Payments from "./client/pages/Payments";
 import Conditions from "./client/pages/Conditions";
 // import Settings from "./client/pages/Settings";
@@ -35,7 +34,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        
+
         {/*//* Login & Logout & Register */}
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
@@ -52,35 +51,33 @@ function App() {
 
         {/* Client Routes */}
         <Route path="/client" element={<ClientLayout />}>
-          <Route path="home" element={<ClientHomePage/>}/>
+          <Route path="home" element={<ClientHomePage />} />
           <Route path="offers" element={<Offers />} />
           <Route path="offers/:id" element={<Offer />} />
           <Route path="add-property" element={<CreateProperty />} />
           <Route path="requests" element={<Requests />} />
-          <Route path="requests/:id" element={<Request />} />
           <Route path="payments" element={<Payments />} />
           <Route path="terms-conditions" element={<Conditions />} />
-          <Route path="settings" element={<SettingsClient />} /> {/* From Mohamed */}
+          <Route path="settings" element={<SettingsClient />} />{" "}
+          {/* From Mohamed */}
         </Route>
         {/* End Client Routes  */}
 
-        
         {/*//* Company */}
         <Route path="company/" element={""}>
           <Route path="settings/" element={<SettingsCompany />} />
         </Route>
-        
+
         {/*//* Reviewer */}
         <Route path="reviewer/" element={""}>
           <Route path="settings/" element={<SettingsReviewer />} />
         </Route>
-        
+
         {/*//! For Development only  */}
         <Route path="/settings" element={<SettingsPage />} />
-        
       </Routes>
     </BrowserRouter>
   );
 }
- 
+
 export default App;
