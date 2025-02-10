@@ -17,13 +17,15 @@ import Requests from "./client/pages/Requests";
 import Request from "./client/pages/Request";
 import Payments from "./client/pages/Payments";
 import Conditions from "./client/pages/Conditions";
-// import Settings from "./client/pages/Settings";
+import Settings from "./client/pages/Settings";
 
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";
 import ForgotPassword from "./main/pages/ForgotPassword";
 import SettingsPage from "./shared/SettingsPage";
+import AddReviewerDrawer from "./company/pages/AddReviewerDrawer";
+import CompanyLayout from "./company/CompanyLayout";
 import SettingsReviewer from "./reviewer/pages/SettingsReviewer";
 import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
@@ -66,7 +68,8 @@ function App() {
                 {/* End Client Routes  */}
 
                 {/*//* Company */}
-                <Route path="company/" element={""}>
+                <Route path="company/" element={<CompanyLayout />}>
+                    <Route path="add/" element={<AddReviewerDrawer />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
