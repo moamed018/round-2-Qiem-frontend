@@ -1,12 +1,14 @@
 import { useParams } from "react-router-dom";
-import { cardDetails } from "../data";
-import { CardProps } from "../types/types";
+import { OfferCardDetails } from "../data";
+import { OfferCardProps } from "../types/types";
 import OfferDetail from "../components/OfferDetail";
 
 export default function Offer() {
   const { id } = useParams();
 
-  const offer = cardDetails.find((card: CardProps) => card.id === Number(id));
+  const offer = OfferCardDetails.find(
+    (card: OfferCardProps) => card.id === Number(id)
+  );
 
   console.log(offer);
   if (!offer) {

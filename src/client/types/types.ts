@@ -24,3 +24,14 @@ export interface RequestCardProps {
   propertyAddress: string;
   propertyDescription: string;
 }
+export interface RequestCardDetailsProps {
+  id?: string;
+  cityName: string;
+  propertyDescription: string;
+  propertyType: string;
+  area: string;
+  district: string;
+  evaluationCompany: string;
+  email: string;
+  evaluationCost: string;
+}

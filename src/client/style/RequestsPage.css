@@ -18,29 +18,20 @@
 
 /* property request card  */
 
-.property-location {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 24px;
-  text-align: right;
-  font-family: "Tajawal", sans-serif;
-  color: rgba(194, 144, 98, 1);
-}
 
-.property-address {
-  font-weight: 700;
-  font-size: 13px;
-  line-height: 16px;
-  text-align: right;
-  color: rgba(0, 0, 0, 1);
-}
 
 .property-description {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
   text-align: right;
-  color: rgba(139, 148, 198, 1);
+  color: rgba(0, 0, 0, 1)
+}
+.property-location {
+  color: rgba(194, 144, 98, 1);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
 }
 
 .request-details-sub-header {
@@ -51,15 +42,16 @@
   text-align: right;
   
 }
-.request-details-sub-header-details {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 22px;
-  text-align: right;
-
-}
 
 
 #request-overlay {
   background-color: rgba(0, 0, 0, 0.7);
+}
+
+.request-card-details-header {
+  color: rgba(194, 144, 98, 1);
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  margin-bottom: 2px;
 }

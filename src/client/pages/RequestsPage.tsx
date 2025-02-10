@@ -2,7 +2,8 @@ import { useState } from "react";
 import RequestCards from "../components/RequestCards";
 import "../style/RequestsPage.css";
 import { RequestCardProps } from "../types/types"; // Import the correct type
-import RequestCard from "../components/RequestCard";
+// import RequestCard from "../components/RequestCard";
+import RequestCardDetails from "../components/RequestCardDetails";
 
 function Requests() {
   const [selectedCard, setSelectedCard] = useState<RequestCardProps | null>(
@@ -26,17 +27,22 @@ function Requests() {
       {selectedCard && (
         <div
           id="request-overlay"
-          className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+          className="fixed inset-0 flex items-center justify-center  z-50"
           onClick={closeOverlay} // Close when clicking outside
         >
           <div
-            className="bg-white p-6 rounded-lg shadow-lg max-w-lg relative"
+            className="bg-white  rounded-lg shadow-lg max-w-sm relative max-h-screen"
             onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside
           >
-            <RequestCard
+            <RequestCardDetails
               cityName={selectedCard.cityName}
-              propertyAddress={selectedCard.propertyAddress}
               propertyDescription={selectedCard.propertyDescription}
+              propertyType="عقار سكني"
+              area="150م"
+              district="حي النرجس"
+              evaluationCompany="شركة الأحمدية"
+              email="alahmdy55@yahoo.com"
+              evaluationCost="12,000"
             />
           </div>
         </div>
