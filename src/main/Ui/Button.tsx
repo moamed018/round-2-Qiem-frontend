@@ -7,6 +7,7 @@ interface LinkButtonProps {
     disabled?: boolean;
     children?: React.ReactNode;
     onClick?: React.MouseEventHandler<HTMLButtonElement>;
+    id?: string;
 }
 
 export default function Button({
