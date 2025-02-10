@@ -2,10 +2,10 @@
 import NotEmptyHomePage from "../components/NotEmptyHomePage";
 
 function ClientHomePage() {
-  return (
-    // <EmptyHomePage />
-    <NotEmptyHomePage/>
-  );
+    return (
+        // <EmptyHomePage />
+        <NotEmptyHomePage />
+    );
 }
 
 export default ClientHomePage;
