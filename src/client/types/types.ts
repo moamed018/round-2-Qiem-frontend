@@ -3,6 +3,8 @@ export interface HomeCardProps {
   cityName: string;
   propertyAddress: string;
   propertyDescription: string;
+  onDelete: () => void;
+  onEdit: () => void;
 }
 
 export interface OfferCardProps {
