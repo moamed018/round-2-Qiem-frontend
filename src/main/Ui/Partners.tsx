@@ -40,7 +40,7 @@ export default function Partners() {
     };
 
     return (
-        <div className="py-30 px-10 bg-[#D1E8E24D]">
+        <div className="pb-30 px-10 bg-[#D1E8E24D]">
             <h2 className="text-center text-4xl font-bold mb-10">
                 شركاؤنا بالنجاح
             </h2>
