@@ -58,7 +58,8 @@
 }
 #home-page-btns {
 }
-#home-page-btn {
+#home-page-btn-edit,
+#home-page-btn-delete {
   cursor: pointer;
   display: flex;
   justify-content: center;
