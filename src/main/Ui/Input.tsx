@@ -5,7 +5,7 @@ interface IconProps {
 }
 
 interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
-    icon: React.ComponentType<IconProps>;
+    icon?: React.ComponentType<IconProps>;
     error?: string;
 }
 
@@ -17,7 +17,9 @@ export default function Input({
 }: InputProps) {
     return (
         <div className="relative">
-            <Icon className="w-[24px] h-[24px] absolute top-3.5 right-4 opacity-40" />
+            {Icon && (
+                <Icon className="w-[24px] h-[24px] absolute top-3.5 right-4 opacity-40" />
+            )}
             <input
                 type="email"
                 className={`w-full py-3 px-12 ${

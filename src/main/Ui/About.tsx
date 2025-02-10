@@ -5,7 +5,7 @@ import { MdMessage } from "react-icons/md";
 
 export default function About() {
     return (
-        <div className="py-30 px-10 bg-[#D1E8E24D]">
+        <div className="py-30 sm:px-10 px-2 bg-[#D1E8E24D]">
             <h2 className="text-center text-4xl font-bold mb-4">
                 ما هي منصة <span className="text-[#C29062]"> قـيم - QAIM</span>{" "}
                 ؟
@@ -56,7 +56,7 @@ export function AboutCard({
             <div className="bg-white sm:w-[280px] sm:h-[280px] w-[200px] h-[200px] rounded-full flex items-center justify-center shadow-2xl mb-10">
                 <Icon className="text-[#D1E8E2] w-[80px] h-[80px] transition-all duration-200 group-hover:text-[#C29062]" />
             </div>
-            <h3 className="text-4xl text-gray-200 font-bold mb-4 transition-all duration-200 group-hover:text-[#C29062] px-2">
+            <h3 className="text-4xl text-gray-700 font-bold mb-4 transition-all duration-200 group-hover:text-[#C29062] px-2">
                 {title}
             </h3>
             <p className="text-lg px-6 text-center group-hover:text-white transition-all duration-200 ">

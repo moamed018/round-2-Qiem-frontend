@@ -1,4 +1,6 @@
 import About from "../Ui/About";
+import ContactUs from "../Ui/Contactus";
+import GetApp from "../Ui/GetApp";
 import Hero from "../Ui/Hero";
 import Partners from "../Ui/Partners";
 
@@ -8,6 +10,8 @@ function Home() {
             <Hero />
             <About />
             <Partners />
+            <ContactUs />
+            <GetApp />
         </section>
     );
 }

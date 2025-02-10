@@ -32,6 +32,8 @@ import SettingsCompany from "./company/pages/SettingsCompany";
 
 import ClientHomePage from "./client/pages/ClientHomePage";
 
+import "./App.css";
+
 function App() {
     return (
         <BrowserRouter>
