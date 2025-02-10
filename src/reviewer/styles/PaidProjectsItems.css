@@ -1,0 +1,46 @@
+.container-items{
+    box-shadow: 0px 15px 15px 0px #00000040;
+    background: #FFFFFF;
+}
+
+.container-items:hover {
+    background: linear-gradient(150.86deg, #C29062 -2.67%, #C29062 56.48%, #000000 113.25%);
+}
+
+.container-items:hover .building-title,
+.container-items:hover .building-price,
+.container-items:hover .building-description {
+    color: var(--white-color, #FFFFFF);
+}
+
+.building-title{
+    font-family: "Tajawal";
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--black, #000000);
+}
+
+
+
+.building-price{
+    font-family: "Tajawal";
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main-color, #C29062);
+}
+
+.building-description{
+    font-family: "Tajawal";
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--blue-color, #8B94C6);
+}
+
+.paid{
+    border: 1px solid var(--white-color, #FFFFFF);
+    font-family: "Tajawal";
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--white-color, #FFFFFF);
+    background: #45ED0A;      
+}
