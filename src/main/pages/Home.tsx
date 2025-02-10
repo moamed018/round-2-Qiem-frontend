@@ -1,5 +1,5 @@
 import About from "../Ui/About";
-import ContactUs from "../Ui/Contactus";
+import ContactUs from "../Ui/ContactUs";
 import GetApp from "../Ui/GetApp";
 import Hero from "../Ui/Hero";
 import Partners from "../Ui/Partners";
