@@ -17,7 +17,7 @@ import Requests from "./client/pages/Requests";
 import Request from "./client/pages/Request";
 import Payments from "./client/pages/Payments";
 import Conditions from "./client/pages/Conditions";
-import Settings from "./client/pages/Settings";
+// import Settings from "./client/pages/Settings";
 
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
