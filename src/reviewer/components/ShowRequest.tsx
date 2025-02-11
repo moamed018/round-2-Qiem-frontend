@@ -1,7 +1,7 @@
 
 import '../styles/ShowRequest.css'
 import samsungcompany from '../../assets/reviewer/samsungcompany.png'
-import ShowRequestDetails from './ShowRequestDetails'
+// import ShowRequestDetails from './ShowRequestDetails'
 
 function ShowRequest() {
   return (
