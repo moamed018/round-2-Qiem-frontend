@@ -1,12 +1,14 @@
 import FormComponent from "../components/CreatePropertyForm";
 import "../style/createProperty.css";
+import CreatePropertyImage from "../../assets/create-property.png";
+import CreatePropertyApprove from "../../assets/create-property-true.png";
 
 function CreateProperty() {
   return (
     <div className="py-10 " id="create-property-container">
       <section className="flex gap-6">
         <img
-          src="/src/assets/create-property.png"
+          src={CreatePropertyImage}
           alt="create-property image"
           className="w-[250px] h-[215px]"
         />
@@ -27,7 +29,7 @@ function CreateProperty() {
           </div>
           <div className="flex gap-2">
             <img
-              src="/src/assets/create-property-true.png"
+              src={CreatePropertyApprove}
               alt="approved"
               className="w-[32px] h-[32px]"
             />

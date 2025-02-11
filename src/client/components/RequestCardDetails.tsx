@@ -1,6 +1,6 @@
 import "../style/RequestsPage.css";
 import { RequestCardDetailsProps } from "../types/types";
-
+import RequestCardDetailImage from "../../assets/home-page-2.1.jpg"
 const RequestCardDetails: React.FC<RequestCardDetailsProps> = ({
   cityName,
   propertyDescription,
@@ -14,7 +14,7 @@ const RequestCardDetails: React.FC<RequestCardDetailsProps> = ({
   return (
     <div className="property-request-card w-full  p-2 flex flex-col gap-4 cursor-pointer">
       <img
-        src="/src/assets/home-page-2.1.jpg"
+        src={RequestCardDetailImage}
         alt="Property request card"
         className="w-full h-[200px]"
       />
