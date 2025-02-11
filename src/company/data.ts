@@ -51,6 +51,7 @@ const data = [
         id: 2,
         title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage2,
+        gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
