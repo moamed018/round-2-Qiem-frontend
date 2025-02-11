@@ -1,6 +1,7 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import "../style/createProperty.css";
+import { HomeCardsDetails } from "../data";
 
 interface FormValues {
   propertyAddress: string;
@@ -35,6 +36,17 @@ const FormComponent: React.FC = () => {
     }),
     onSubmit: (values) => {
       console.log("Form Submitted:", values);
+      const newId = (HomeCardsDetails.length + 1).toString();
+      const newProperty = {
+        id: newId,
+        propertyAddress: values.propertyAddress,
+        cityName: values.city,
+        propertyDescription: values.details,
+
+      }
+
+      HomeCardsDetails.push(newProperty);
+
       alert(JSON.stringify(values, null, 2));
     },
   });

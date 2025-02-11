@@ -1,4 +1,5 @@
-// import EmptyHomePage from "../components/EmptyHomePage";
+// import EmptyHomePage from "./EmptyHomePage";
+
 import NotEmptyHomePage from "../components/NotEmptyHomePage";
 
 function ClientHomePage() {
