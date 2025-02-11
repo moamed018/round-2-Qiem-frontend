@@ -30,7 +30,8 @@ import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
 
 import ClientHomePage from "./client/pages/ClientHomePage";
-import TermsAndConditions from "./client/components/terms_and_conditions";
+// import TermsAndConditions from "./client/components/terms_and_conditions";
+import TermsAndConditions from "./client/components/TermConditions";
 
 import "./App.css";
 
