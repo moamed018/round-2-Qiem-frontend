@@ -1,6 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import Home from "./main/pages/Home";
-import "./App.css";
+import Login from "./main/pages/Login";
+import RegisterHome from "./main/pages/RegisterHome";
+import Clients from "./main/pages/Clients";
+import RegisterOutlet from "./main/pages/RegisterOutlet";
+import ClientsOutlet from "./main/pages/ClientsOutlet";
+import Client from "./main/pages/Client";
 import ClientLayout from "./client/ClientLayout";
 import Offers from "./client/pages/Offers";
 import Offer from "./client/pages/Offer";
