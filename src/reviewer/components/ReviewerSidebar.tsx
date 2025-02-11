@@ -1,10 +1,10 @@
 import "../styles/Sidebar.css";
 import { IoMdHome } from "react-icons/io";
-import { MdGroups } from "react-icons/md";
+// import { MdGroups } from "react-icons/md";
 import { IoSettingsOutline } from "react-icons/io5";
 import { RxExit } from "react-icons/rx";
 import { MdOutlinePayment } from "react-icons/md";
-import { BiSolidOffer } from "react-icons/bi";
+// import { BiSolidOffer } from "react-icons/bi";
 import { SiCarrd } from "react-icons/si";
 import { MdOutlinePolicy } from "react-icons/md";
 import { LuWallet } from "react-icons/lu";
