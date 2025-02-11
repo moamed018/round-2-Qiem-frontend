@@ -34,6 +34,8 @@ import ClientHomePage from "./client/pages/ClientHomePage";
 import TermsAndConditions from "./client/components/TermConditions";
 
 import "./App.css";
+import CompanyHomePage from "./company/pages/CompanyHomePage";
+import Property from "./company/pages/Property";
 
 function App() {
     return (
@@ -55,23 +57,28 @@ function App() {
                     <Route path="company/" element={<Company />} />
                 </Route>
 
-        {/* Client Routes */}
-        <Route path="/client" element={<ClientLayout />}>
-          <Route path="home" element={<ClientHomePage />} />
-          <Route path="offers" element={<Offers />} />
-          <Route path="offers/:id" element={<Offer />} />
-          <Route path="add-property" element={<CreateProperty />} />
-          <Route path="requests" element={<Requests />} />
-          <Route path="payments" element={<Payments />} />
-          <Route path="terms-conditions" element={<TermsAndConditions />} />
-          <Route path="settings" element={<SettingsClient />} />
-          {/* From Mohamed */}
-        </Route>
-        {/* End Client Routes  */}
-
+                {/* Client Routes */}
+                <Route path="/client" element={<ClientLayout />}>
+                    <Route path="home" element={<ClientHomePage />} />
+                    <Route path="offers" element={<Offers />} />
+                    <Route path="offers/:id" element={<Offer />} />
+                    <Route path="add-property" element={<CreateProperty />} />
+                    <Route path="requests" element={<Requests />} />
+                    <Route path="payments" element={<Payments />} />
+                    <Route
+                        path="terms-conditions"
+                        element={<TermsAndConditions />}
+                    />
+                    <Route path="settings" element={<SettingsClient />} />
+                    {/* From Mohamed */}
+                </Route>
+                {/* End Client Routes  */}
 
                 {/*//* Company */}
                 <Route path="company/" element={<CompanyLayout />}>
+                    <Route path="" element={<CompanyHomePage />} />
+                    <Route path="properties/" element={<CompanyHomePage />} />
+                    <Route path="properties/:id" element={<Property />} />
                     <Route path="add/" element={<AddReviewerDrawer />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
