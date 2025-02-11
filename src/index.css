@@ -2,7 +2,7 @@
 @import "tailwindcss";
 
 body {
-  direction: rtl;
-  font-family: "Tajawal", serif;
-  margin: 0;
+    direction: rtl;
+    font-family: "Tajawal", serif;
+    margin: 0;
 }
