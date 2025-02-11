@@ -1,5 +1,12 @@
-export interface CardProps {
-  id: number;
+export interface HomeCardProps {
+  id?: string;
+  cityName: string;
+  propertyAddress: string;
+  propertyDescription: string;
+}
+
+export interface OfferCardProps {
+  id?: number;
   companyName: string;
   homePrice: string;
   homeDescription1: string;
@@ -9,4 +16,22 @@ export interface CardProps {
 export interface OfferDetails {
   companyName: string;
   homePrice: string;
+}
+
+export interface RequestCardProps {
+  id?: string;
+  cityName: string;
+  propertyAddress: string;
+  propertyDescription: string;
+}
+export interface RequestCardDetailsProps {
+  id?: string;
+  cityName: string;
+  propertyDescription: string;
+  propertyType: string;
+  area: string;
+  district: string;
+  evaluationCompany: string;
+  email: string;
+  evaluationCost: string;
 }
