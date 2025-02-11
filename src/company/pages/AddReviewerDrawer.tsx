@@ -4,7 +4,9 @@ import DropDown from "../components/DropDown";
 import PersonCard from "../components/PersonCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
-
+import Modal from "../../shared/Modal";
+import { FaCheck } from "react-icons/fa"; 
+import { Link } from "react-router-dom";
 interface Option {
   id: number;
   name: string;
@@ -14,19 +16,39 @@ interface Option {
 
 const AddReviewerDrawer: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalMessage, setModalMessage] = useState("");
   const drawerOptions = [
-    { id: 1, name: " أحمد محمد", additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.", type: "drawer" },
-    { id: 2, name: "محمد علي", additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", type: "drawer" },
+    { id: 1, name: " أحمد محمد", additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.", type: "drawer" ,profileImage: "/src/assets/avatar.png",
+      inspectionFee: "10000000",
+      experienceYears: "5",
+      expertiseField: "Civil Engineering",
+      workRegions: ["سير", "الرياض", "جازان"],
+      description: "تفاصيل الملف الشخصي هنا..."},
+    { id: 2, name: "محمد علي", additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", type: "drawer",profileImage: "/src/assets/avatar.png",
+      inspectionFee: "10000000",
+      experienceYears: "5",
+      expertiseField: "Civil Engineering",
+      workRegions: ["سير", "الرياض", "جازان"],
+      description: "تفاصيل الملف الشخصي هنا..." },
   ];
 
   const reviewerOptions = [
     { id: 3, name: "هشام سعد", additionalInfo: "مهندس مدني محترف بخبرة كبير في مجال الإنشاءات", type: "reviewer" },
     { id: 4, name: "محمد علي", additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", type: "drawer" }
   ];
-
+  
   const handleDelete = (id: number) => {
     setSelectedOptions(selectedOptions.filter((item) => item.id !== id));
+
+    // Show modal with message
+    setModalMessage("تم الحذف بنجاح");
+    setIsModalOpen(true);
+
+    // Hide modal after 2 seconds
+    setTimeout(() => {
+      setIsModalOpen(false);
+    }, 2000);
   };
 
   const handleEdit = (id: number) => {
@@ -57,6 +79,7 @@ const AddReviewerDrawer: React.FC = () => {
 
       <div className="m-6 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {selectedOptions.map((selected) => (
+          <Link to={`profile/${selected.id}`} key={selected.id}>
           <PersonCard
             key={selected.id}
             name={selected.name}
@@ -66,9 +89,21 @@ const AddReviewerDrawer: React.FC = () => {
             onDelete={() => handleDelete(selected.id)}
             onSend={() => handleSend(selected.id)}
           />
+          </Link>
         ))}
       </div>
+      {/* Modal for delete confirmation */}
+      <Modal
+        isOpen={isModalOpen}
+        Icon={FaCheck}
+        onClose={() => setIsModalOpen(false)}
+        title=""
+        description={modalMessage}
+        type="info"
+        
+      />
     </div>
+
   );
 };
 

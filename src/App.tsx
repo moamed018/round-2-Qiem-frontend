@@ -17,7 +17,7 @@ import Requests from "./client/pages/Requests";
 import Request from "./client/pages/Request";
 import Payments from "./client/pages/Payments";
 import Conditions from "./client/pages/Conditions";
-import Settings from "./client/pages/Settings";
+// import Settings from "./client/pages/Settings";
 
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
@@ -31,6 +31,7 @@ import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
 
 import ClientHomePage from "./client/pages/ClientHomePage";
+import ReviewerProfilePage from "./drawer/pages/ReviewerProfilePage";
 
 function App() {
   return (
@@ -71,6 +72,7 @@ function App() {
         {/*//* Company */}
         <Route path="company/" element={<CompanyLayout />}>
         <Route path="add/" element={<AddReviewerDrawer />} />
+          <Route path="profile/1" element={<ReviewerProfilePage />} />
           <Route path="settings/" element={<SettingsCompany />} />
         </Route>
         
@@ -82,6 +84,9 @@ function App() {
         {/*//! For Development only  */}
         <Route path="/settings" element={<SettingsPage />} />
         
+         {/*//* Drawer */}
+         <Route path="drawer/" element={""}>
+        </Route>
       </Routes>
     </BrowserRouter>
   );
