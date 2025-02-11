@@ -15,8 +15,6 @@ import Offer from "./client/pages/Offer";
 import CreateProperty from "./client/pages/CreateProperty";
 import Requests from "./client/pages/RequestsPage";
 import Payments from "./client/pages/Payments";
-// import Conditions from "./client/pages/Conditions";
-// import Settings from "./client/pages/Settings";
 
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
@@ -30,7 +28,6 @@ import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
 
 import ClientHomePage from "./client/pages/ClientHomePage";
-// import TermsAndConditions from "./client/components/terms_and_conditions";
 import TermsAndConditions from "./client/components/TermConditions";
 
 import "./App.css";
