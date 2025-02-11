@@ -1,8 +1,7 @@
 import { useState } from "react";
 import RequestCards from "../components/RequestCards";
 import "../style/RequestsPage.css";
-import { RequestCardProps } from "../types/types"; // Import the correct type
-// import RequestCard from "../components/RequestCard";
+import { RequestCardProps } from "../types/types";
 import RequestCardDetails from "../components/RequestCardDetails";
 
 function Requests() {
