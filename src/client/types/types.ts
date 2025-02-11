@@ -41,4 +41,5 @@ export interface RequestCardDetailsProps {
 export interface OfferStatusProps {
   onClose: () => void;
   message: string;
+  status: string;
 }

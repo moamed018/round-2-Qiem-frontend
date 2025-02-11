@@ -15,7 +15,6 @@ import Offer from "./client/pages/Offer";
 import CreateProperty from "./client/pages/CreateProperty";
 import Requests from "./client/pages/RequestsPage";
 import Payments from "./client/pages/Payments";
-
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";

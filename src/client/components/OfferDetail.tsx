@@ -5,19 +5,18 @@ import OfferStatus from "./OfferStatus";
 import { useState } from "react";
 
 function OfferDetail({ companyName, homePrice }: OfferDetails) {
-  const [isOfferAccepted, setIsOfferAccepted] = useState(false);
-  const [isOfferRefused, setIsOfferRefused] = useState(false);
-  // const [offerStatusMessage, setIsOfferStatusMessage] = useState("");
+  const [offerStatus, setOfferStatus] = useState<
+    "accepted" | "rejected" | null
+  >(null);
 
   const handleAcceptOffer = () => {
-    // Call API to accept the offer
     console.log("Offer Accepted");
-    setIsOfferAccepted(true);
+    setOfferStatus("accepted");
   };
+
   const handleRefuseOffer = () => {
-    // Call API to reject the offer
     console.log("Offer Rejected");
-    setIsOfferRefused(true);
+    setOfferStatus("rejected");
   };
 
   return (
@@ -57,16 +56,16 @@ function OfferDetail({ companyName, homePrice }: OfferDetails) {
           </button>
         </div>
       </div>
-      {isOfferAccepted && (
+
+      {offerStatus && (
         <OfferStatus
-          onClose={() => setIsOfferAccepted(false)}
-          message="سوف يتم قبول الطلب بالفعل "
-        />
-      )}
-      {isOfferRefused && (
-        <OfferStatus
-          onClose={() => setIsOfferRefused(false)}
-          message="سوف يتم رفض الطلب بالفعل "
+          onClose={() => setOfferStatus(null)}
+          message={
+            offerStatus === "accepted"
+              ? "سوف يتم قبول الطلب بالفعل"
+              : "سوف يتم رفض الطلب بالفعل"
+          }
+          status={offerStatus}
         />
       )}
     </section>
