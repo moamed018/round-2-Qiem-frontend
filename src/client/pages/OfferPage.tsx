@@ -12,7 +12,7 @@ export default function Offer() {
 
   console.log(offer);
   if (!offer) {
-    return <h1>Offer not found</h1>;
+    return <h1>Requst not found</h1>;
   }
 
   return (

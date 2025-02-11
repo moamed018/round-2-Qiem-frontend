@@ -1,35 +1,51 @@
 import { CiEdit } from "react-icons/ci";
 import { IoClose } from "react-icons/io5";
+import { HomeCardProps } from "../types/types";
+import "../style/HomePage.css";
+import HomePage from"/src/assets/home-page-2.1.jpg"
 
-
-function HomeCard() {
+const HomeCard: React.FC<HomeCardProps> = ({
+  cityName,
+  propertyAddress,
+  propertyDescription,
+  onDelete,
+  onEdit,
+}) => {
   return (
-    <div className="w-[380px] h-[490px]  p-2 flex flex-col gap-7" id="home-card-container">
-      <div className="flex flex-col w-fit ">
-        <img src="/src/assets/home-page-2.1.jpg" alt="home page card" />
+    <div
+      className="w-[380px] p-2 flex flex-col gap-7 h-[500px]"
+      id="home-card-container"
+    >
+      <div className="flex flex-col w-fit">
+        <img src={HomePage} alt="home page card" />
       </div>
       <div className="flex flex-col gap-2">
-        <h2 id="home-card-header">الرياض</h2>
-        <p id="home-card-address">
-          عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض
-        </p>
-        <p id="home-card-description">
-          تتكون من صالة ومجلس وثلاث غرف نوم ومطبخ وثلاث دورات مياه وتراس  مطل
-          على الشارع  بمساحة 138م...........
-        </p>
+        <h2 id="home-card-header">{cityName}</h2>
+        <p className="single-line-text">{propertyAddress}</p>
+        <p className="single-line-text">{propertyDescription}</p>
       </div>
-      <div id="home-page-btns" className="flex gap-3">
-        <button id="home-page-btn">
+      <div className="flex gap-3">
+        <button
+          type="button"
+          className="flex items-center gap-1"
+          id="home-page-btn-edit"
+          onClick={onEdit}
+        >
           <p>تعديل</p>
-          <CiEdit className="w-[30px] h-[30px] font-extrabold"/>
+          <CiEdit className="w-6 h-6" />
         </button>
-        <button id="home-page-btn">
+        <button
+          type="button"
+          className="flex items-center gap-1"
+          id="home-page-btn-delete"
+          onClick={onDelete}
+        >
           <p>حذف</p>
-          <IoClose className="w-[30px] h-[30px] font-extrabold"/>
+          <IoClose className="w-6 h-6" />
         </button>
       </div>
     </div>
   );
-}
+};
 
 export default HomeCard;

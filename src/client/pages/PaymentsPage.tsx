@@ -1,5 +1,5 @@
 const Payments = () => {
-    return <div>Payments</div>;
+  return <div>Payments</div>;
 };
 
 export default Payments;
