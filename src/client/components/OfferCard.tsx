@@ -1,5 +1,6 @@
 import React from "react";
 import "../style/card.css";
+import AcceptOffer from "./OfferStatus";
 
 interface CardProps {
   companyName: string;
@@ -32,14 +33,12 @@ const Card: React.FC<CardProps> = ({
       {/* Buttons Section */}
       <div className="offers-btns flex flex-col gap-2 justify-between mt-3">
         <button className="offer-btn px-4 py-2 text-white rounded-md">
-         عرض
+          عرض
         </button>
 
         {/* Accept & Reject Buttons */}
         <div className="flex gap-5">
-          <button className="offer-accept-btn w-full">
-            قبول
-          </button>
+          <button className="offer-accept-btn w-full">قبول</button>
           <button className="offer-refuse-btn px-3 py-2 w-full bg-red-500 text-white rounded-md">
             رفض
           </button>

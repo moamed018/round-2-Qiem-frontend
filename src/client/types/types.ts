@@ -37,3 +37,8 @@ export interface RequestCardDetailsProps {
   email: string;
   evaluationCost: string;
 }
+
+export interface OfferStatusProps {
+  onClose: () => void;
+  message: string;
+}

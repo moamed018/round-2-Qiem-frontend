@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Cards() {
   return (
-    <div className="flex flex-wrap gap-6 justify-center p-5">
+    <div className="flex flex-wrap gap-6 justify-center ">
       {OfferCardDetails.map((card, index) => (
         <Link to={`/client/offers/${card.id}`}>
           <Card

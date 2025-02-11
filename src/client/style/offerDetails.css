@@ -58,5 +58,38 @@
   font-size: 20px;
   text-align: right;
   line-height: 24px;
+}
 
+/* offer status  */
+#offer-status-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+#offer-status-btn-approve,
+#offer-status-btn-close {
+  width:45%;
+  border-radius: 10px;
+  cursor: pointer;
+  line-height: 26px;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+#offer-status-btn-approve {
+  background-color: rgba(194, 144, 98, 1);
+  color: white;
+
+}
+
+#offer-status-btn-close {
+  background-color: transparent;
+  border: 2px solid rgba(194, 144, 98, 1);
+  color: rgba(194, 144, 98, 1);
+}
+
+#offer-status-header {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  text-align: center;
+  color: rgba(0, 0, 0, 1);
 }
