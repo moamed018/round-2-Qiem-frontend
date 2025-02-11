@@ -2,7 +2,7 @@
 import Header from '../../shared/Header'
 import ReviewerSidebar from '../components/ReviewerSidebar'
 import ShowRequest from '../components/ShowRequest'
-import ShowRequestDetails from '../components/ShowRequestDetails'
+// import ShowRequestDetails from '../components/ShowRequestDetails'
 
 function ReviewerHomePage() {
     return (
