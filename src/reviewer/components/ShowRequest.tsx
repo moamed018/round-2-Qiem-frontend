@@ -1,18 +1,21 @@
 
 import '../styles/ShowRequest.css'
+import samsungcompany from '../../assets/reviewer/samsungcompany.png'
+import ShowRequestDetails from './ShowRequestDetails'
 
 function ShowRequest() {
   return (
-    
-    <div dir="rtl" className=" card-container w-full">
+    <>
+      {/* <ShowRequestDetails/> */}
+      <div dir="rtl" className=" card-container w-full ">
       {/* card-content */}
       <div className='card-content px-5 py-8 mt-16 mr-8 rounded-md w-5/6'>
         
         {/* content-section */}
-        <div className=' flex mb-8 max-sm:mb-28  max-md:mb-16 max-lg:mb-12 '>
+        <div className=' flex mb-8 max-sm:mb-48  max-md:mb-16 max-lg:mb-12 '>
         {/* image */}
         <div className='ml-8 w-1/6'>
-          <img src='/src/assets/reviewer/samsungcompany.jpeg' className='rounded-sm drop-shadow-lg h-full'/>
+          <img src={samsungcompany} className='rounded-sm h-full '/>
         </div>
         {/*== image ==*/}
          
@@ -33,13 +36,16 @@ function ShowRequest() {
           <button className='accept-request-btn rounded-md cursor-pointer '>قبول</button>
           <button className='refuse-request-btn rounded-md cursor-pointer'>رفض</button>
           <button className='watch-details-btn rounded-md cursor-pointer '>مشاهده التفاصيل</button>
-
         </div>
          {/*== Buttons Section ==*/}
 
       </div>
       {/*== card-content ==*/}
     </div>
+      
+    </>
+    
+    
   )
 }
 

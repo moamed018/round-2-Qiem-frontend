@@ -1,0 +1,36 @@
+.button-section .accept-request-btn,
+.refuse-request-btn {
+    height: 50px;
+    font-family: "Tajawal";
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.accept-request-btn {
+
+    background: linear-gradient(90deg, #45ED0A 3.59%, #000000 181.03%);
+
+}
+
+.refuse-request-btn {
+    background: linear-gradient(90deg, #FF0000 3.59%, #000000 181.03%);
+}
+
+.main-font {
+    font-family: "Tajawal";
+}
+
+.main-color {
+    color: var(--main-color, #C29062);
+
+}
+
+.overlay {
+    width: 100%;
+    height: 200vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #000000B2;
+}

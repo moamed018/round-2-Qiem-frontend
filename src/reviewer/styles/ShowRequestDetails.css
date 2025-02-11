@@ -1,0 +1,27 @@
+
+.requested-details-content{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+}
+
+
+
+.common-style{
+    font-size: 16px;
+    line-height: 19.2px;
+    letter-spacing: 0%;
+
+}
+
+.header{
+    font-size: 18px;
+    line-height: 21.6px;
+    letter-spacing: 0%;
+}
+
+.building-image{
+    box-shadow: 0px 12px 28px 0px #00000040;
+}
