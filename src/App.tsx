@@ -28,7 +28,10 @@ import TermsAndConditions from "./client/components/TermConditions";
 
 import "./App.css";
 import CompanyHomePage from "./company/pages/CompanyHomePage";
-import Property from "./company/pages/Property";
+import PropertyPage from "./company/pages/PropertyPage";
+import ProjectsPage from "./company/pages/ProjectsPage";
+import ProjectPage from "./company/pages/ProjectPage";
+import Dashboards from "./shared/Dashboards";
 
 function App() {
     return (
@@ -71,8 +74,10 @@ function App() {
                 <Route path="company/" element={<CompanyLayout />}>
                     <Route path="" element={<CompanyHomePage />} />
                     <Route path="properties/" element={<CompanyHomePage />} />
-                    <Route path="properties/:id" element={<Property />} />
+                    <Route path="properties/:id" element={<PropertyPage />} />
                     <Route path="add/" element={<AddReviewerDrawer />} />
+                    <Route path="projects/" element={<ProjectsPage />} />
+                    <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
@@ -83,6 +88,7 @@ function App() {
 
                 {/*//! For Development only  */}
                 <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/dashboard" element={<Dashboards />} />
             </Routes>
         </BrowserRouter>
     );
