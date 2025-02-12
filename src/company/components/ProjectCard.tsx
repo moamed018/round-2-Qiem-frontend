@@ -24,9 +24,16 @@ export default function ProjectCard({
     if (status === "old") {
         statusStyle = "text-white bg-[#C29062] border-[#fff] border";
     }
+    if (status === "approved") {
+        if (project.statusApproved === "مقبول") {
+            statusStyle = "text-white bg-[#45ED0A] border-[#fff] border";
+        } else {
+            statusStyle = "text-white bg-[#FF0000] border-[#fff] border";
+        }
+    }
 
     return (
-        <div className="group pb-4 shadow-xl rounded-sm hover:bg-[#C29062] transition-all duration-300 hover:transform hover:translate-y-[-5px]">
+        <div className="group pb-4 shadow-2xl rounded-sm hover:bg-[#C29062] transition-all duration-300 hover:transform hover:translate-y-[-5px]">
             <div className="relative mx-1 mt-2 h-65 overflow-hidden">
                 <span
                     className={`absolute z-50 left-2 top-2 text-xs py-2 px-8 font-bold rounded-full ${statusStyle}`}
