@@ -1,10 +1,13 @@
-import { Link, useParams } from "react-router-dom";
 import data from "../data.ts";
 import { useEffect, useState } from "react";
-import UploadFile from "../components/UploadFile.tsx";
 
-export default function Property() {
-    const { id } = useParams();
+export default function ProjectDetails({
+    id,
+    showGallery = true,
+}: {
+    id: string;
+    showGallery?: boolean;
+}) {
     const [property, setProperty] = useState<{
         title: string;
         id: number;
@@ -36,42 +39,37 @@ export default function Property() {
     }, [id]);
 
     return (
-        <div className="py-10 lg:px-6 px-4">
-            <div className="text-[#C29062] font-bold text-lg mb-4 flex gap-2 px-2">
-                <Link
-                    className="border-b border-transparent hover:border-[#C29062] transition-all duration-100"
-                    to="/company/"
-                >
-                    الرئيسية
-                </Link>
-                /
-                <Link
-                    className="border-b border-transparent hover:border-[#C29062] transition-all duration-100"
-                    to="/company/properties/"
-                >
-                    عقارات
-                </Link>
-                / <span className="text-black">تفاصيل</span>
-            </div>
+        <div>
             <h2 className="text-xl font-bold px-2 mb-4">{property?.title}</h2>
-            <div className="grid sm:grid-cols-8 grid-cols-6 grid-rows-2 gap-3 rounded-lg overflow-hidden mb-14">
-                <div className="md:col-span-4 col-span-full row-span-full overflow-hidden">
+            <div
+                className={`grid ${
+                    property?.gallery &&
+                    property.gallery.length > 0 &&
+                    showGallery
+                        ? "sm:grid-cols-8 grid-cols-6 "
+                        : "grid-cols-4 max-h-150"
+                } grid-rows-2 gap-3 rounded-lg overflow-hidden mb-14`}
+            >
+                <div
+                    className={`md:col-span-4 col-span-full row-span-full overflow-hidden`}
+                >
                     <img
                         className="w-full h-full object-cover transition-all duration-300 hover:scale-110 opacity-90 hover:opacity-100"
                         src={property?.image}
                     />
                 </div>
-                {property?.gallery.map((e, i) => (
-                    <div
-                        key={i}
-                        className="sm:col-span-2 col-span-3 row-span-1 overflow-hidden"
-                    >
-                        <img
-                            className="w-full  h-full object-cover transition-all duration-300 hover:scale-110 scale-105 opacity-90 hover:opacity-100"
-                            src={e}
-                        />
-                    </div>
-                ))}
+                {showGallery &&
+                    property?.gallery.map((e, i) => (
+                        <div
+                            key={i}
+                            className="sm:col-span-2 col-span-3 row-span-1 overflow-hidden"
+                        >
+                            <img
+                                className="w-full h-full object-cover transition-all duration-300 hover:scale-110 scale-105 opacity-90 hover:opacity-100"
+                                src={e}
+                            />
+                        </div>
+                    ))}
             </div>
             <h3 className="sm:px-20 px-4 sm:text-4xl text-2xl font-bold text-[#C29062] mb-8">
                 {property?.price} {property?.priceType}
@@ -101,15 +99,6 @@ export default function Property() {
                     <p className="text-[#C29062] font-bold">المنطقة</p>
                     <p>{property?.info.region}</p>
                 </div>
-            </div>
-            <div className="lg:min-w-1/2 lg:w-fit min-w-full mx-auto">
-                <UploadFile
-                    heading="اضافة مسودة"
-                    btnText="ارسال  عرض تقييم"
-                    onClickHandler={(file) => {
-                        console.log(file);
-                    }}
-                />
             </div>
         </div>
     );
