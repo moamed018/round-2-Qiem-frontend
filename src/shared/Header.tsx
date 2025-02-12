@@ -1,4 +1,5 @@
 import "./style/Header.css";
+import  Avatar  from "../assets/avatar.png"
 
 import { IoIosSearch } from "react-icons/io";
 import NotificationDropdown from "../reviewer/components/notifications";
@@ -32,7 +33,7 @@ function Header() {
           <h2 className="text-lg text-white username">Ahmed Mohamed</h2>
           <img
             className="w-[50px] h-[50px] rounded-full "
-            src="/src/assets/avatar.png"
+            src={Avatar}
             alt="avatar"
           />
         </div>

@@ -1,11 +1,9 @@
-import EmptyHomePage from "../components/EmptyHomePage";
+import EmptyHomePage from "./EmptyHomePage";
+import { HomeCardsDetails } from "../data";
 import NotEmptyHomePage from "../components/NotEmptyHomePage";
 
 function ClientHomePage() {
-  return (
-    // <EmptyHomePage />
-    <NotEmptyHomePage/>
-  );
+  return HomeCardsDetails.length > 0 ? <NotEmptyHomePage /> : <EmptyHomePage />;
 }
 
 export default ClientHomePage;

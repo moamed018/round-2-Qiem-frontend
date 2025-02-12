@@ -1,0 +1,30 @@
+#edit-property-header {
+  color: rgba(194, 144, 98, 1);
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+
+
+
+
+#edit-property-form-container {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+
+#submit-btn {
+  color: white;
+  background-color: rgba(194, 144, 98, 1);
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  border-radius: 15px;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+#submit-btn:hover {
+  background-color: rgba(194, 144, 98, 0.8);
+}

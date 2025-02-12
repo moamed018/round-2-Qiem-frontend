@@ -1,4 +1,3 @@
-import React from "react";
 import TermsAndConditions from "../components/TermConditions";
 
 const Conditions = () => {
