@@ -29,6 +29,8 @@ import PropertyPage from "./company/pages/PropertyPage";
 import ProjectsPage from "./company/pages/ProjectsPage";
 import ProjectPage from "./company/pages/ProjectPage";
 import Dashboards from "./shared/Dashboards";
+import Balance from "./company/pages/Balance";
+import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
 
 import "./App.css";
 
@@ -64,16 +66,19 @@ function App() {
           <Route path="settings" element={<SettingsClient />} />
         </Route>
 
-        {/* Company Routes */}
-        <Route path="company/" element={<CompanyLayout />}>
-          <Route path="" element={<CompanyHomePage />} />
-          <Route path="properties/" element={<CompanyHomePage />} />
-          <Route path="properties/:id" element={<PropertyPage />} />
-          <Route path="add/" element={<AddReviewerDrawer />} />
-          <Route path="projects/" element={<ProjectsPage />} />
-          <Route path="projects/:id" element={<ProjectPage />} />
-          <Route path="settings/" element={<SettingsCompany />} />
-        </Route>
+                {/*//* Company */}
+                <Route path="company/" element={<CompanyLayout />}>
+                    <Route path="" element={<CompanyHomePage />} />
+                    <Route path="properties/" element={<CompanyHomePage />} />
+                    <Route path="properties/:id" element={<PropertyPage />} />
+                    <Route path="add/" element={<AddReviewerDrawer />} />
+                    <Route path="projects/" element={<ProjectsPage />} />
+                    <Route path="projects/:id" element={<ProjectPage />} />
+                    <Route path="balance/" element={<Balance />} />
+                    <Route path="paid/" element={<CompanyPaidProjects />} />
+                    <Route path="settings/" element={<SettingsCompany />} />
+                </Route>
+
 
         {/* Reviewer Routes */}
         <Route path="reviewer/" element={""}>
