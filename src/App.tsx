@@ -32,6 +32,8 @@ import PropertyPage from "./company/pages/PropertyPage";
 import ProjectsPage from "./company/pages/ProjectsPage";
 import ProjectPage from "./company/pages/ProjectPage";
 import Dashboards from "./shared/Dashboards";
+import Balance from "./company/pages/Balance";
+import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
 
 function App() {
     return (
@@ -78,6 +80,8 @@ function App() {
                     <Route path="add/" element={<AddReviewerDrawer />} />
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
+                    <Route path="balance/" element={<Balance />} />
+                    <Route path="paid/" element={<CompanyPaidProjects />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
