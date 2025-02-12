@@ -13,7 +13,7 @@ const HomeCard: React.FC<HomeCardProps> = ({
 }) => {
   return (
     <div
-      className="w-[380px] p-2 flex flex-col gap-7 h-[500px]"
+      className="w-[350px] p-2 flex flex-col gap-7 h-[500px] rounded-lg"
       id="home-card-container"
     >
       <div className="flex flex-col w-fit">
