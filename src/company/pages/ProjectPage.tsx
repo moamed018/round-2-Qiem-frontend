@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import UploadFile from "../components/UploadFile.tsx";
 import ProjectDetails from "../components/ProjectDetails.tsx";
 import Breadcrumb from "../components/Breadcrumb.tsx";
-import AddNotes from "../components/addNotes.tsx";
+import AddNotes from "../components/AddNotes.tsx";
 import ButtonAction from "../components/ButtonAction.tsx";
 
 export default function ProjectPage() {
