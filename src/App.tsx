@@ -11,7 +11,7 @@ import Offers from "./client/pages/Offers";
 import Offer from "./client/pages/Offer";
 import CreateProperty from "./client/pages/CreateProperty";
 import Requests from "./client/pages/RequestsPage";
-import Payments from "./client/pages/Payments";
+import PaymentsPage from "./client/pages/PaymentsPage";
 import ClientCompany from "./main/pages/ClientCompany";
 import Reviewer from "./main/pages/Reviewer";
 import Company from "./main/pages/Company";
@@ -31,61 +31,58 @@ import CompanyHomePage from "./company/pages/CompanyHomePage";
 import Property from "./company/pages/Property";
 
 function App() {
-    return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Home />} />
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
 
-                {/*//* Login & Logout & Register */}
-                <Route path="/login" element={<Login />} />
-                <Route path="/forgot-password" element={<ForgotPassword />} />
-                <Route path="/register/" element={<RegisterOutlet />}>
-                    <Route path="" element={<RegisterHome />} />
-                    <Route path="clients/" element={<ClientsOutlet />}>
-                        <Route path="" element={<Clients />} />
-                        <Route path="client/" element={<Client />} />
-                        <Route path="company/" element={<ClientCompany />} />
-                    </Route>
-                    <Route path="reviewer/" element={<Reviewer />} />
-                    <Route path="company/" element={<Company />} />
-                </Route>
+        {/*//* Login & Logout & Register */}
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/register/" element={<RegisterOutlet />}>
+          <Route path="" element={<RegisterHome />} />
+          <Route path="clients/" element={<ClientsOutlet />}>
+            <Route path="" element={<Clients />} />
+            <Route path="client/" element={<Client />} />
+            <Route path="company/" element={<ClientCompany />} />
+          </Route>
+          <Route path="reviewer/" element={<Reviewer />} />
+          <Route path="company/" element={<Company />} />
+        </Route>
 
-                {/* Client Routes */}
-                <Route path="/client" element={<ClientLayout />}>
-                    <Route path="home" element={<ClientHomePage />} />
-                    <Route path="offers" element={<Offers />} />
-                    <Route path="offers/:id" element={<Offer />} />
-                    <Route path="add-property" element={<CreateProperty />} />
-                    <Route path="requests" element={<Requests />} />
-                    <Route path="payments" element={<Payments />} />
-                    <Route
-                        path="terms-conditions"
-                        element={<TermsAndConditions />}
-                    />
-                    <Route path="settings" element={<SettingsClient />} />
-                    {/* From Mohamed */}
-                </Route>
-                {/* End Client Routes  */}
+        {/* Client Routes */}
+        <Route path="/client" element={<ClientLayout />}>
+          <Route path="home" element={<ClientHomePage />} />
+          <Route path="offers" element={<Offers />} />
+          <Route path="offers/:id" element={<Offer />} />
+          <Route path="add-property" element={<CreateProperty />} />
+          <Route path="requests" element={<Requests />} />
+          <Route path="payments" element={<PaymentsPage />} />
+          <Route path="terms-conditions" element={<TermsAndConditions />} />
+          <Route path="settings" element={<SettingsClient />} />
+          {/* From Mohamed */}
+        </Route>
+        {/* End Client Routes  */}
 
-                {/*//* Company */}
-                <Route path="company/" element={<CompanyLayout />}>
-                    <Route path="" element={<CompanyHomePage />} />
-                    <Route path="properties/" element={<CompanyHomePage />} />
-                    <Route path="properties/:id" element={<Property />} />
-                    <Route path="add/" element={<AddReviewerDrawer />} />
-                    <Route path="settings/" element={<SettingsCompany />} />
-                </Route>
+        {/*//* Company */}
+        <Route path="company/" element={<CompanyLayout />}>
+          <Route path="" element={<CompanyHomePage />} />
+          <Route path="properties/" element={<CompanyHomePage />} />
+          <Route path="properties/:id" element={<Property />} />
+          <Route path="add/" element={<AddReviewerDrawer />} />
+          <Route path="settings/" element={<SettingsCompany />} />
+        </Route>
 
-                {/*//* Reviewer */}
-                <Route path="reviewer/" element={""}>
-                    <Route path="settings/" element={<SettingsReviewer />} />
-                </Route>
+        {/*//* Reviewer */}
+        <Route path="reviewer/" element={""}>
+          <Route path="settings/" element={<SettingsReviewer />} />
+        </Route>
 
-                {/*//! For Development only  */}
-                <Route path="/settings" element={<SettingsPage />} />
-            </Routes>
-        </BrowserRouter>
-    );
+        {/*//! For Development only  */}
+        <Route path="/settings" element={<SettingsPage />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
