@@ -43,3 +43,11 @@ export interface OfferStatusProps {
   message: string;
   status: string;
 }
+
+export interface PaymentsCardProps {
+  id?: number;
+  propertyAddress: string;
+  propertyDescription: string;
+  propertyPrice: string;
+  
+}
