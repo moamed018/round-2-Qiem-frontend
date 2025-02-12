@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import ReviewCard from "./Comment";
+import Comment from "./comment";
 import { IoSend } from "react-icons/io5"; 
 
 interface User {
@@ -21,7 +21,7 @@ const initialReviews: Review[] = [
     user: {
       id: 101,
       name: "أحمد محمد",
-      avatar: "https://i.pravatar.cc/150?img=3",
+      avatar: "/src/assets/avatar.png",
     },
   },
   {
@@ -30,7 +30,7 @@ const initialReviews: Review[] = [
     user: {
       id: 102,
       name: "سارة خالد",
-      avatar: "https://i.pravatar.cc/150?img=5",
+      avatar: "/src/assets/avatar.png",
     },
   },
 ];
@@ -47,12 +47,12 @@ const Reviews: React.FC = () => {
       content: newComment,
       user: {
         id: 999,
-        name: "مستخدم مجهول",
-        avatar: "https://i.pravatar.cc/150?img=15",
+        name: "نجلاء سعد",
+        avatar: "/src/assets/avatar.png",
       },
     };
 
-    setReviews([newReview, ...reviews]); 
+    setReviews([...reviews,newReview]); 
     setNewComment(""); 
   };
 
@@ -68,13 +68,13 @@ const Reviews: React.FC = () => {
         
     {/* show comments */}
     {reviews.map((review) => (
-        <ReviewCard key={review.id} review={review} />
+        <Comment key={review.id} review={review} />
       ))}
       {/*add new comment*/}
       <div className=" flex items-center justify-center bg-[#d1e8e24d] p-6">
       <div>
-        <button
-          className="text-white bg-[#C29062] hover:text-blue-800 rounded-full p-2 me-2 text-center"
+        <button aria-label="add comment"
+          className="text-white bg-[#C29062] hover:text-white rounded-full p-2 me-2 text-center"
           onClick={handleAddComment}
         >
           <IoSend size={20} />

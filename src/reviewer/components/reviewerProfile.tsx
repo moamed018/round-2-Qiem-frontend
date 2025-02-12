@@ -1,6 +1,6 @@
 import React from "react";
 
-interface DrawerProfileProps {
+export interface ReviewerProfileProps {
   name: string;
   profileImage: string;
   inspectionFee: string;
@@ -11,7 +11,7 @@ interface DrawerProfileProps {
   type: string;
 }
 
-const DrawerProfile: React.FC<DrawerProfileProps> = ({
+const ReviewerProfile: React.FC<ReviewerProfileProps> = ({
   name,
   profileImage,
   inspectionFee,
@@ -81,4 +81,4 @@ const DrawerProfile: React.FC<DrawerProfileProps> = ({
   );
 };
 
-export default DrawerProfile;
+export default ReviewerProfile;

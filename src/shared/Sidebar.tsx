@@ -22,6 +22,12 @@ function Sidebar() {
           </Link>
         </div>
         <div className="sidebar-item">
+        <MdGroups className="sidebar-icon" />
+          <Link to="/company/addteam" className="sidebar-link">
+            الفريق
+          </Link>
+        </div>
+        <div className="sidebar-item">
           <MdGroups className="sidebar-icon" />
           <Link to="/client/add-property" className="sidebar-link">
             اضافة عقار

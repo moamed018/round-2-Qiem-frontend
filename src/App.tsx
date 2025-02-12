@@ -31,7 +31,7 @@ import SettingsClient from "./client/pages/SettingsClient";
 import SettingsCompany from "./company/pages/SettingsCompany";
 
 import ClientHomePage from "./client/pages/ClientHomePage";
-import ReviewerProfilePage from "./drawer/pages/ReviewerProfilePage";
+import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
 
 function App() {
   return (
@@ -71,8 +71,8 @@ function App() {
         
         {/*//* Company */}
         <Route path="company/" element={<CompanyLayout />}>
-        <Route path="add/" element={<AddReviewerDrawer />} />
-          <Route path="profile/1" element={<ReviewerProfilePage />} />
+        <Route path="addteam/" element={<AddReviewerDrawer />} />
+          <Route path="profile/:id" element={<ReviewerProfilePage />} />
           <Route path="settings/" element={<SettingsCompany />} />
         </Route>
         
@@ -85,11 +85,11 @@ function App() {
         <Route path="/settings" element={<SettingsPage />} />
         
          {/*//* Drawer */}
-         <Route path="drawer/" element={""}>
+        <Route path="drawer/" element={""}>
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
- 
+
 export default App;
