@@ -51,7 +51,7 @@ const validationSchema = Yup.object({
 
 const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mode }) => {
     const [file, setFile] = useState<File | null>(null);
-
+        
     const formik = useFormik({
         initialValues: {
             propertyCode: "",
@@ -109,7 +109,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
     };
     return (
         <form onSubmit={formik.handleSubmit} className="max-w-2xl mx-auto bg-white p-6 shadow-lg rounded-lg space-y-4">
-            {/* كود العقار */}
             <div>
                 <label>كود العقار</label>
                 <input
@@ -123,7 +122,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 />
             </div>
 
-            {/* تاريخ التقييم */}
             <div>
                 <label>تاريخ التقييم</label>
                 <input
@@ -135,7 +133,8 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     value={formik.values.evaluationDate}
                     className="w-full border border-[#D1E8E2] rounded p-2"
                 />
-            </div>{/* وصف العقار */}
+            </div>
+
             <div>
                 <label>الوصف العام</label>
                 <textarea
@@ -148,7 +147,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 />
             </div>
 
-            {/* وصف الموقع */}
             <div>
                 <label>وصف الموقع</label>
                 <textarea
@@ -161,7 +159,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 />
             </div>
 
-            {/* رقم الصك */}
             <div>
                 <label>رقم الصك</label>
                 <input
@@ -177,7 +174,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 />
             </div>
 
-            {/* تاريخ الصك */}
             <div>
                 <label>تاريخ الصك</label>
                 <input
@@ -192,7 +188,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 />
             </div>
 
-            {/* نوع العقار */}
             <div>
                 <label>نوع العقار</label>
                 <input
@@ -814,7 +809,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 </div>
             </div>
 
-            {/* رفع الصور */}
             {mode === "reviewer" && (
                 <div>
                     <label>رفع صور العقار</label>
@@ -843,7 +837,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                 </div>
             )}
 
-            {/* زر الإرسال */}
             {mode === "reviewer" && (<ButtonCard
             type="button"
             label="إرسال"
