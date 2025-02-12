@@ -30,6 +30,7 @@ const Navbar = () => {
                     { to: "/about", label: "من نحن" },
                     { to: "/contact", label: "تواصل معنا" },
                     { to: "/help", label: "المساعدة" },
+                    { to: "/dashboard", label: "صفحات التحكم" },
                 ].map(({ to, label }) => (
                     <li key={to} className="flex p-4 lg:p-0">
                         <NavLink
