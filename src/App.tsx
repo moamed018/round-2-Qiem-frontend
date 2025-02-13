@@ -34,6 +34,8 @@ import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
 
 import "./App.css";
 import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
+import CommentsPage from "./company/pages/CommentsPage";
+import TeamReports from "./company/pages/TeamReports";
 
 function App() {
   return (
@@ -76,6 +78,8 @@ function App() {
                     <Route path="profile/:id" element={<ReviewerProfilePage />} />
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
+                    <Route path="projects/:id/comments" element={<CommentsPage />} />
+                    <Route path="/company/projects/:id/team-reports" element={<TeamReports />} />
                     <Route path="balance/" element={<Balance />} />
                     <Route path="paid/" element={<CompanyPaidProjects />} />
                     <Route path="settings/" element={<SettingsCompany />} />

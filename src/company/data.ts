@@ -9,6 +9,7 @@ import GalleryImage1 from '../assets/company/gallery1.png'
 import GalleryImage2 from '../assets/company/gallery2.png'
 import GalleryImage3 from '../assets/company/gallery3.png'
 import GalleryImage4 from '../assets/company/gallery4.png'
+import { Review } from "./components/Comments";
 
 const data = [
     {
@@ -266,3 +267,73 @@ const data = [
 ];
 
 export default data;
+export const drawerOptions = [
+    { id: 1, name: " أحمد محمد", 
+      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.",
+      type: "drawer" ,
+      },
+
+    { id: 2, name: "محمد علي", 
+      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", 
+      type: "drawer",
+      }
+  ];
+
+export const reviewerOptions = [
+    { id: 3,
+      name: "هشام سعد",
+      additionalInfo: "مهندس مدني محترف بخبرة كبير في مجال الإنشاءات",
+      type: "reviewer" },
+    { id: 4,
+      name: "محمد علي",
+      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", 
+      type: "drawer" }
+  ];
+
+export const allReviews: Review[] = [
+      {
+        id: 1,
+        content: "عقار رائع جدًا! أنصح به.",
+        user: {
+          id: 101,
+          name: "أحمد محمد",
+          avatar: "/src/assets/avatar.png",
+        },
+        projectId: "1",
+      },
+      {
+        id: 2,
+        content: "المكان نظيف ولكن السعر مرتفع قليلاً.",
+        user: {
+          id: 102,
+          name: "سارة خالد",
+          avatar: "/src/assets/avatar.png",
+        },
+        projectId: "2",
+      },
+      {
+        id: 3,
+        content: "موقع مثالي وقريب من جميع الخدمات.",
+        user: {
+          id: 103,
+          name: "خالد علي",
+          avatar: "/src/assets/avatar.png",
+        },
+        projectId: "1",
+      },
+    ];
+    export const staticTeamData: Record<string, { id: number; name: string; type: string }[]> = {
+        "1": [
+          { id: 1, name: "أحمد محمد", type: "Reviewer" },
+          { id: 2, name: "سارة علي", type: "Drawer" },
+        ],
+        "2": [
+          { id: 3, name: "خالد حسن", type: "Reviewer" },
+          { id: 4, name: "منى سعيد", type: "Reviewer" },
+          { id: 5, name: "حسام بدر", type: "Drawer" },
+        ],
+        "3": [
+          { id: 6, name: "عبدالله فريد", type: "Drawer" },
+          { id: 7, name: "ياسمين عمر", type: "Reviewer" },
+        ],
+      };

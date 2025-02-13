@@ -23,7 +23,7 @@ function Sidebar() {
         </div>
         <div className="sidebar-item">
         <MdGroups className="sidebar-icon" />
-          <Link to="/company/addteam" className="sidebar-link">
+          <Link to="/company/add-team" className="sidebar-link">
             الفريق
           </Link>
         </div>

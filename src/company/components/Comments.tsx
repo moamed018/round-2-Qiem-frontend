@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Comment from "./Comment";
-import { IoSend } from "react-icons/io5"; 
+import { IoSend } from "react-icons/io5";
+import { allReviews } from "../data";
 
 interface User {
   id: number;
@@ -8,36 +9,31 @@ interface User {
   avatar: string;
 }
 
-interface Review {
+export interface Review {
   id: number;
   content: string;
   user: User;
+  projectId: string;
 }
 
-const initialReviews: Review[] = [
-  {
-    id: 1,
-    content: "عقار رائع جدًا! أنصح به.",
-    user: {
-      id: 101,
-      name: "أحمد محمد",
-      avatar: "/src/assets/avatar.png",
-    },
-  },
-  {
-    id: 2,
-    content: "المكان نظيف ولكن السعر مرتفع قليلاً.",
-    user: {
-      id: 102,
-      name: "سارة خالد",
-      avatar: "/src/assets/avatar.png",
-    },
-  },
-];
+interface ReviewsProps {
+  projectId: string;
+}
 
-const Reviews: React.FC = () => {
-  const [reviews, setReviews] = useState<Review[]>(initialReviews);
+const Reviews: React.FC<ReviewsProps> = ({ projectId }) => {
+  // Static review data
+  
+
+  const [reviews, setReviews] = useState<Review[]>([]); 
   const [newComment, setNewComment] = useState<string>("");
+  const [visibleReviewsCount, setVisibleReviewsCount] = useState<number>(3);
+
+  useEffect(() => {
+    const filteredReviews = allReviews.filter(
+      (review) => review.projectId === projectId
+    );
+    setReviews(filteredReviews);
+  }, [projectId]); 
 
   const handleAddComment = () => {
     if (newComment.trim() === "") return;
@@ -50,10 +46,11 @@ const Reviews: React.FC = () => {
         name: "نجلاء سعد",
         avatar: "/src/assets/avatar.png",
       },
+      projectId: projectId,
     };
 
-    setReviews([...reviews,newReview]); 
-    setNewComment(""); 
+    setReviews((prevReviews) => [...prevReviews, newReview]);
+    setNewComment("");
   };
 
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -62,23 +59,46 @@ const Reviews: React.FC = () => {
     }
   };
 
+  // Load more comments
+  const loadMoreComments = () => {
+    setVisibleReviewsCount(visibleReviewsCount + 3);
+  };
+
   return (
     <div className="mt-6">
       <h3 className="text-lg font-semibold mb-4">التعليقات ({reviews.length})</h3>
-        
-    {/* show comments */}
-    {reviews.map((review) => (
-        <Comment key={review.id} review={review} />
-      ))}
-      {/*add new comment*/}
-      <div className=" flex items-center justify-center bg-[#d1e8e24d] p-6">
-      <div>
-        <button aria-label="add comment"
-          className="text-white bg-[#C29062] hover:text-white rounded-full p-2 me-2 text-center"
-          onClick={handleAddComment}
-        >
-          <IoSend size={20} />
-        </button>
+
+      {/* Display comments */}
+      {reviews.length > 0 ? (
+        reviews.slice(0, visibleReviewsCount).map((review) => (
+          <Comment key={review.id} review={review} />
+        ))
+      ) : (
+        <p>لا توجد تعليقات بعد.</p> // If no comments, display this message
+      )}
+
+      {/* Load more button */}
+      {visibleReviewsCount < reviews.length && (
+        <div className="text-center mt-4">
+          <button
+            className="bg-[#C29062] text-white px-4 py-2 rounded-md"
+            onClick={loadMoreComments}
+          >
+            تحميل المزيد
+          </button>
+        </div>
+      )}
+
+      {/* Add new comment */}
+      <div className="flex items-center justify-center bg-[#d1e8e24d] p-6 fixed bottom-0 left-0 right-[263px] ">
+        <div>
+          <button
+            aria-label="add comment"
+            className="text-white bg-[#C29062] hover:text-white rounded-full p-2 me-2 text-center"
+            onClick={handleAddComment}
+          >
+            <IoSend size={20} />
+          </button>
         </div>
         <input
           type="text"
@@ -86,7 +106,7 @@ const Reviews: React.FC = () => {
           placeholder="أضف تعليقك هنا..."
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
-          onKeyDown={handleKeyDown} 
+          onKeyDown={handleKeyDown}
         />
       </div>
     </div>
