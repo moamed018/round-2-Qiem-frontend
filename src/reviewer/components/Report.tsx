@@ -62,7 +62,7 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
             deedDate: "",
             propertyType: "",
             infrastructure: "",
-            services: [],
+            services: [] as string[],
             propertyAge: "",
             usability: "",
             number: "",
@@ -98,6 +98,7 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
         },
         validationSchema,
         onSubmit: (values) => {
+            console.log(file);
             console.log("Submitted Data:", values);
         },
     });
