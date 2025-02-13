@@ -47,6 +47,7 @@ function DrawerHomePage() {
                     id="overlay"
                     className="bg-[rgba(0,0,0,0.8)] fixed inset-0 flex items-center justify-center z-30 cursor-pointer"
                     onClick={closeOverlay}
+                    style={{ zIndex: 1000 }}
                 >
                     <div
                         className="bg-white rounded-lg shadow-lg max-w-[80vw] md:max-w-md relative max-h-[95vh] overflow-auto z-40 cursor-auto"
