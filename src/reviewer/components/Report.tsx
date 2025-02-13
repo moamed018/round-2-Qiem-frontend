@@ -98,6 +98,7 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
         },
         validationSchema,
         onSubmit: (values) => {
+            console.log(file);
             console.log("Submitted Data:", values);
         },
     });
