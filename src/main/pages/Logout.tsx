@@ -2,17 +2,18 @@ import { useState } from "react";
 import Button from "../Ui/Button";
 import Modal from "../../shared/Modal";
 import { FaUserAlt } from "react-icons/fa";
+import { RxExit } from "react-icons/rx";
 export default function Logout() {
     const [openModal, setOpenModal] = useState<boolean>(false);
     return (
         <>
-            <Button
+            <button
                 onClick={() => setOpenModal(true)}
-                className="text-5xl"
-                fullRounded
+                className="text-lg flex font-bold gap-3 cursor-pointer hover:text-[#c29062]"
             >
-                Log Out
-            </Button>
+                <RxExit className="sidebar-icon" />
+                تسجيل الخروج
+            </button>
 
             <Modal
                 isOpen={openModal === true}

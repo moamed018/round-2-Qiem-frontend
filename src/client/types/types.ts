@@ -45,7 +45,7 @@ export interface OfferStatusProps {
 }
 
 export interface PaymentsCardProps {
-  id?: number;
+  id?: string;
   propertyAddress: string;
   propertyDescription: string;
   propertyPrice: string;

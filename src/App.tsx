@@ -31,45 +31,50 @@ import ProjectPage from "./company/pages/ProjectPage";
 import Dashboards from "./shared/Dashboards";
 import Balance from "./company/pages/Balance";
 import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
-
-import "./App.css";
 import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
 import CommentsPage from "./company/pages/CommentsPage";
 import TeamReports from "./company/pages/TeamReports";
+import PayOffer from "./client/components/PayOffer";
+import DrawerLayout from "./drawer/DrawerLayout";
+import DrawerHomePage from "./drawer/pages/DrawerHomePage";
+import Conditions from "./client/pages/Conditions";
+
+import "./App.css";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
 
-        {/* Login & Registration */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/register/" element={<RegisterOutlet />}>
-          <Route path="" element={<RegisterHome />} />
-          <Route path="clients/" element={<ClientsOutlet />}>
-            <Route path="" element={<Clients />} />
-            <Route path="client/" element={<Client />} />
-            <Route path="company/" element={<ClientCompany />} />
-          </Route>
-          <Route path="reviewer/" element={<Reviewer />} />
-          <Route path="company/" element={<Company />} />
-        </Route>
+                {/* Login & Registration */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/register/" element={<RegisterOutlet />}>
+                    <Route path="" element={<RegisterHome />} />
+                    <Route path="clients/" element={<ClientsOutlet />}>
+                        <Route path="" element={<Clients />} />
+                        <Route path="client/" element={<Client />} />
+                        <Route path="company/" element={<ClientCompany />} />
+                    </Route>
+                    <Route path="reviewer/" element={<Reviewer />} />
+                    <Route path="company/" element={<Company />} />
+                </Route>
 
-        {/* Client Routes */}
-        <Route path="/client" element={<ClientLayout />}>
-          <Route path="home" element={<ClientHomePage />} />
-          <Route path="offers" element={<Offers />} />
-          <Route path="offers/:id" element={<Offer />} />
-          <Route path="add-property" element={<CreateProperty />} />
-          <Route path="requests" element={<Requests />} />
-          <Route path="payments" element={<PaymentsPage />} />
-          <Route path="terms-conditions" element={<TermsAndConditions />} />
-          <Route path="settings" element={<SettingsClient />} />
-        </Route>
+                {/* Client Routes */}
+                <Route path="/client" element={<ClientLayout />}>
+                    <Route path="" element={<ClientHomePage />} />
+                    <Route path="offers" element={<Offers />} />
+                    <Route path="offers/:id" element={<Offer />} />
+                    <Route path="add-property" element={<CreateProperty />} />
+                    <Route path="requests" element={<Requests />} />
+                    <Route path="payments" element={<PaymentsPage />} />
+                    <Route path="payments/:id" element={<PayOffer />} />
+                    <Route path="terms-conditions" element={<TermsAndConditions />} />
+                    <Route path="settings" element={<SettingsClient />} />
+                </Route>
 
-                {/*//* Company */}
+                {/* Company Routes */}
                 <Route path="company/" element={<CompanyLayout />}>
                     <Route path="" element={<CompanyHomePage />} />
                     <Route path="properties/" element={<CompanyHomePage />} />
@@ -81,22 +86,28 @@ function App() {
                     <Route path="projects/:id/comments" element={<CommentsPage />} />
                     <Route path="/company/projects/:id/team-reports" element={<TeamReports />} />
                     <Route path="balance/" element={<Balance />} />
-                    <Route path="paid/" element={<CompanyPaidProjects />} />
+                    <Route path="terms-conditions" element={<Conditions />} />
+                    <Route path="payments/" element={<CompanyPaidProjects />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
+                {/* Reviewer Routes */}
+                <Route path="reviewer/" element={""}>
+                    <Route path="settings/" element={<SettingsReviewer />} />
+                </Route>
 
-        {/* Reviewer Routes */}
-        <Route path="reviewer/" element={""}>
-          <Route path="settings/" element={<SettingsReviewer />} />
-        </Route>
+                {/* Drawer Routes */}
+                <Route path="drawer/" element={<DrawerLayout />}>
+                    <Route path="terms-conditions" element={<Conditions />} />
+                    <Route path="" element={<DrawerHomePage />} />
+                </Route>
 
-        {/* Development Routes */}
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/dashboard" element={<Dashboards />} />
-      </Routes>
-    </BrowserRouter>
-  );
+                {/* Development Routes */}
+                <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/dashboard" element={<Dashboards />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

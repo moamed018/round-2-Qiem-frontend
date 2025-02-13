@@ -6,13 +6,10 @@ function PaymentCard({
   propertyAddress,
   propertyPrice,
   propertyDescription,
-  isSelected,
-}: PaymentsCardProps & { isSelected: boolean }) {
+}: PaymentsCardProps) {
   return (
     <section
-      className={`flex flex-col gap-3 w-[350px] h-[450px] p-2 border ${
-        isSelected ? "border-green-500 shadow-lg" : "border-gray-300"
-      }`}
+      className={`flex flex-col gap-3 w-[350px] h-[450px] p-2 `}
       id="payment-card-container"
     >
       <img src={HomeImage} alt="payment card image" className="rounded-md" />
