@@ -62,7 +62,7 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
             deedDate: "",
             propertyType: "",
             infrastructure: "",
-            services: string[] = [],
+            services: [] as string[],
             propertyAge: "",
             usability: "",
             number: "",
