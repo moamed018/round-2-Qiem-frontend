@@ -35,6 +35,7 @@ import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
 import PayOffer from "./client/components/PayOffer";
 import DrawerLayout from "./drawer/DrawerLayout";
 import DrawerHomePage from "./drawer/pages/DrawerHomePage";
+import Conditions from "./client/pages/Conditions";
 
 import "./App.css";
 
@@ -60,7 +61,7 @@ function App() {
 
                 {/* Client Routes */}
                 <Route path="/client" element={<ClientLayout />}>
-                    <Route path="home" element={<ClientHomePage />} />
+                    <Route path="" element={<ClientHomePage />} />
                     <Route path="offers" element={<Offers />} />
                     <Route path="offers/:id" element={<Offer />} />
                     <Route path="add-property" element={<CreateProperty />} />
@@ -81,7 +82,8 @@ function App() {
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="balance/" element={<Balance />} />
-                    <Route path="paid/" element={<CompanyPaidProjects />} />
+                    <Route path="terms-conditions" element={<Conditions />} />
+                    <Route path="payments/" element={<CompanyPaidProjects />} />
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
@@ -92,6 +94,7 @@ function App() {
 
                 {/* Drawer Routes */}
                 <Route path="drawer/" element={<DrawerLayout />}>
+                    <Route path="terms-conditions" element={<Conditions />} />
                     <Route path="" element={<DrawerHomePage />} />
                 </Route>
 

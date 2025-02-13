@@ -7,7 +7,15 @@ function DrawerLayout() {
         <div className="">
             <Header />
             <div className="flex">
-                <Sidebar />
+                <Sidebar
+                    prenetPage="drawer"
+                    showTeam={false}
+                    showProjects={false}
+                    showAddProperty={false}
+                    showOffers={false}
+                    showRequests={false}
+                    showPayments={false}
+                />
                 <div className="flex-1">
                     <Outlet />
                 </div>

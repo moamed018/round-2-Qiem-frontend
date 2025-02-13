@@ -39,8 +39,9 @@ const Modal: React.FC<ModalProps> = ({
 
     return ReactDOM.createPortal(
         <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90"
+            className="fixed inset-0  flex items-center justify-center bg-black/90"
             onClick={handleBackdropClick}
+            style={{ zIndex: 1000 }}
         >
             <div
                 className={`relative w-full max-w-xl p-4 mx-4 border rounded-xl shadow-xl min-h-80 flex flex-col justify-between  ${theme}`}
@@ -55,9 +56,8 @@ const Modal: React.FC<ModalProps> = ({
                     {Icon && (
                         <Icon
                             className={`text-7xl text-white p-4 rounded-full mb-4 ${
-                                type === "confirmation"|| type==="info"
+                                type === "confirmation" || type === "info"
                                     ? "bg-[#C29062]"
-                                    
                                     : ""
                             }`}
                         />
