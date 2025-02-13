@@ -5,10 +5,10 @@ import MainImage4 from "../assets/company/main_project_4.png";
 import MainImage5 from "../assets/company/main_project_5.png";
 import MainImage6 from "../assets/company/main_project_6.png";
 
-import GalleryImage1 from '../assets/company/gallery1.png'
-import GalleryImage2 from '../assets/company/gallery2.png'
-import GalleryImage3 from '../assets/company/gallery3.png'
-import GalleryImage4 from '../assets/company/gallery4.png'
+import GalleryImage1 from "../assets/company/gallery1.png";
+import GalleryImage2 from "../assets/company/gallery2.png";
+import GalleryImage3 from "../assets/company/gallery3.png";
+import GalleryImage4 from "../assets/company/gallery4.png";
 
 const data = [
     {
@@ -19,6 +19,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -40,12 +41,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 2,
@@ -55,6 +62,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -76,12 +84,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 3,
@@ -91,6 +105,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مرفوض",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -112,12 +127,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 4,
@@ -127,6 +148,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -148,12 +170,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 5,
@@ -163,6 +191,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مرفوض",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -184,12 +213,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 6,
@@ -199,6 +234,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -220,12 +256,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
     {
         id: 7,
@@ -235,6 +277,7 @@ const data = [
         statusOld: "جديد",
         statusApproved: "مقبول",
         statusPaid: "مدفوع",
+        companyName: "شركة عقاركم",
         price: "85,000",
         priceType: "ريال سعودي",
         description: {
@@ -256,12 +299,18 @@ const data = [
                 "صيانة مجانية للمساحات المشتركة لمدة سنة من تاريخ الملكية",
             ],
         },
-        info : {
-            type: 'عقار سكني',
-            space: '150م',
-            city: 'الرياض',
-            region :'حي النرجس'
-        }
+        info: {
+            type: "عقار سكني",
+            space: "150م",
+            city: "الرياض",
+            region: "حي النرجس",
+        },
+        evaluation: {
+            company: "شركة الأحمدية",
+            email: "alahmdy55@yahoo.com",
+            price: "12.000",
+            priceType: "ريال سعودي",
+        },
     },
 ];
 

@@ -23,7 +23,7 @@ export default function Button({
         <button
             type={type}
             onClick={onClick}
-            className={`bg-[#C29062] !text-white py-3 px-5 cursor-pointer hover:opacity-80 transition-all duration-500 ${className} ${
+            className={`bg-[#C29062] !text-white py-3 px-5 cursor-pointer hover:opacity-80 transition-all duration-500 hover:scale-95 ${className} ${
                 fullRounded ? "rounded-full" : "rounded-2xl"
             }`}
             disabled={disabled}
