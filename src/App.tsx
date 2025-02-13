@@ -34,38 +34,43 @@ import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
 
 import "./App.css";
 import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
+import DrawerLayout from "./drawer/DrawerLayout";
+import DrawerHomePage from "./drawer/pages/DrawerHomePage";
 
 function App() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Home />} />
 
-        {/* Login & Registration */}
-        <Route path="/login" element={<Login />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/register/" element={<RegisterOutlet />}>
-          <Route path="" element={<RegisterHome />} />
-          <Route path="clients/" element={<ClientsOutlet />}>
-            <Route path="" element={<Clients />} />
-            <Route path="client/" element={<Client />} />
-            <Route path="company/" element={<ClientCompany />} />
-          </Route>
-          <Route path="reviewer/" element={<Reviewer />} />
-          <Route path="company/" element={<Company />} />
-        </Route>
+                {/* Login & Registration */}
+                <Route path="/login" element={<Login />} />
+                <Route path="/forgot-password" element={<ForgotPassword />} />
+                <Route path="/register/" element={<RegisterOutlet />}>
+                    <Route path="" element={<RegisterHome />} />
+                    <Route path="clients/" element={<ClientsOutlet />}>
+                        <Route path="" element={<Clients />} />
+                        <Route path="client/" element={<Client />} />
+                        <Route path="company/" element={<ClientCompany />} />
+                    </Route>
+                    <Route path="reviewer/" element={<Reviewer />} />
+                    <Route path="company/" element={<Company />} />
+                </Route>
 
-        {/* Client Routes */}
-        <Route path="/client" element={<ClientLayout />}>
-          <Route path="home" element={<ClientHomePage />} />
-          <Route path="offers" element={<Offers />} />
-          <Route path="offers/:id" element={<Offer />} />
-          <Route path="add-property" element={<CreateProperty />} />
-          <Route path="requests" element={<Requests />} />
-          <Route path="payments" element={<PaymentsPage />} />
-          <Route path="terms-conditions" element={<TermsAndConditions />} />
-          <Route path="settings" element={<SettingsClient />} />
-        </Route>
+                {/* Client Routes */}
+                <Route path="/client" element={<ClientLayout />}>
+                    <Route path="home" element={<ClientHomePage />} />
+                    <Route path="offers" element={<Offers />} />
+                    <Route path="offers/:id" element={<Offer />} />
+                    <Route path="add-property" element={<CreateProperty />} />
+                    <Route path="requests" element={<Requests />} />
+                    <Route path="payments" element={<PaymentsPage />} />
+                    <Route
+                        path="terms-conditions"
+                        element={<TermsAndConditions />}
+                    />
+                    <Route path="settings" element={<SettingsClient />} />
+                </Route>
 
                 {/*//* Company */}
                 <Route path="company/" element={<CompanyLayout />}>
@@ -73,7 +78,10 @@ function App() {
                     <Route path="properties/" element={<CompanyHomePage />} />
                     <Route path="properties/:id" element={<PropertyPage />} />
                     <Route path="add-team/" element={<AddReviewerDrawer />} />
-                    <Route path="profile/:id" element={<ReviewerProfilePage />} />
+                    <Route
+                        path="profile/:id"
+                        element={<ReviewerProfilePage />}
+                    />
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="balance/" element={<Balance />} />
@@ -81,18 +89,22 @@ function App() {
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
+                {/* Reviewer Routes */}
+                <Route path="reviewer/" element={""}>
+                    <Route path="settings/" element={<SettingsReviewer />} />
+                </Route>
 
-        {/* Reviewer Routes */}
-        <Route path="reviewer/" element={""}>
-          <Route path="settings/" element={<SettingsReviewer />} />
-        </Route>
+                {/*//* Drawer */}
+                <Route path="drawer/" element={<DrawerLayout />}>
+                    <Route path="" element={<DrawerHomePage />} />
+                </Route>
 
-        {/* Development Routes */}
-        <Route path="/settings" element={<SettingsPage />} />
-        <Route path="/dashboard" element={<Dashboards />} />
-      </Routes>
-    </BrowserRouter>
-  );
+                {/* Development Routes */}
+                <Route path="/settings" element={<SettingsPage />} />
+                <Route path="/dashboard" element={<Dashboards />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

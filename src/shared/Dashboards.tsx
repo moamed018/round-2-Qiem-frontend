@@ -12,6 +12,9 @@ export default function Dashboards() {
             <LinkButton className="w-full text-center text-2xl" to="/reviewer/">
                 Reviewer
             </LinkButton>
+            <LinkButton className="w-full text-center text-2xl" to="/drawer/">
+                Drawer
+            </LinkButton>
         </div>
     );
 }
