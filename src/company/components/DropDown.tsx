@@ -32,7 +32,7 @@ const DropDown: React.FC<DropDownProps> = ({ options, label, onSelect, selectedO
         <select
           onChange={handleSelectChange}
           value={selectedValue}
-          className="w-full p-3 text-lg focus:outline-none bg-[#d1e8e24d] border-b border-[#d8dfeb] group-hover:bg-gradient-to-r from-[#C29062] to-black group-hover:text-white transition-all duration-300 appearance-none"
+          className="w-full p-3 text-lg focus:outline-none bg-[#d1e8e24d] border-b border-[#d8dfeb] group-hover:bg-gradient-to-r from-[#C29062] to-black group-hover:text-white active:bg-linear-to-r active:from-[#000] active:to-[#C29062]  transition-all duration-300 appearance-none"
           aria-label={label}
         >
           <option value="" className="text-black">{label}</option>

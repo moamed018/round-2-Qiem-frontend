@@ -1,13 +1,7 @@
 import React, { useState } from "react";
 import { IoNotificationsSharp } from "react-icons/io5";
+import { notifications } from "../../company/data";
 
-const notifications = [
-    { id: 1, title: "تخفيضات لفترة محدودة", description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق", image: "/src/assets/samsungcompany.jpeg" },
-    { id: 2, title: "سعداء بشراكتنا", description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق", image: "/src/assets/samsungcompany.jpeg" },
-    { id: 3, title: "طلب تعيين معين", description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق", image: "/src/assets/samsungcompany.jpeg" },
-    { id: 4, title: "تم ارسال تقرير التقييم", description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق", image: "/src/assets/samsungcompany.jpeg" },
-    { id: 5, title: "تم سداد رسوم المعاين", description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق", image: "/src/assets/samsungcompany.jpeg" },
-];
 
 const NotificationDropdown: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +13,7 @@ const NotificationDropdown: React.FC = () => {
                 <span className="absolute top-0 right-0 bg-red-500 text-white text-xs font-bold w-5 h-5 flex items-center justify-center rounded-full">
                     {notifications.length}
                 </span>
-          <IoNotificationsSharp className=" notifications-icon" />
+                <IoNotificationsSharp className=" notifications-icon" />
             </button>
 
             {/* Dropdown Panel */}

@@ -51,7 +51,7 @@ export default function ProjectCard({
                 </span>
                 <img
                     className="w-full h-full object-cover group-hover:scale-110 transition-all duration-300"
-                    src={project.image}
+                    src={project.image} alt={project.title}
                 />
             </div>
             <div className="px-3 mb-1 group-hover:text-white transition-all duration-300">
