@@ -5,10 +5,10 @@ import { Link } from "react-router-dom";
 function Cards() {
   return (
     <div className="flex flex-wrap gap-6 justify-center ">
-      {OfferCardDetails.map((card, index) => (
+      {OfferCardDetails.map((card) => (
         <Link to={`/client/offers/${card.id}`}>
           <Card
-            key={index}
+            key={card.id}
             companyName={card.companyName}
             homePrice={card.homePrice}
             homeDescription1={card.homeDescription1}

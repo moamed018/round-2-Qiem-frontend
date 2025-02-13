@@ -31,11 +31,12 @@ import ProjectPage from "./company/pages/ProjectPage";
 import Dashboards from "./shared/Dashboards";
 import Balance from "./company/pages/Balance";
 import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
-
-import "./App.css";
 import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
+import PayOffer from "./client/components/PayOffer";
 import DrawerLayout from "./drawer/DrawerLayout";
 import DrawerHomePage from "./drawer/pages/DrawerHomePage";
+
+import "./App.css";
 
 function App() {
     return (
@@ -65,23 +66,18 @@ function App() {
                     <Route path="add-property" element={<CreateProperty />} />
                     <Route path="requests" element={<Requests />} />
                     <Route path="payments" element={<PaymentsPage />} />
-                    <Route
-                        path="terms-conditions"
-                        element={<TermsAndConditions />}
-                    />
+                    <Route path="payments/:id" element={<PayOffer />} />
+                    <Route path="terms-conditions" element={<TermsAndConditions />} />
                     <Route path="settings" element={<SettingsClient />} />
                 </Route>
 
-                {/*//* Company */}
+                {/* Company Routes */}
                 <Route path="company/" element={<CompanyLayout />}>
                     <Route path="" element={<CompanyHomePage />} />
                     <Route path="properties/" element={<CompanyHomePage />} />
                     <Route path="properties/:id" element={<PropertyPage />} />
                     <Route path="add-team/" element={<AddReviewerDrawer />} />
-                    <Route
-                        path="profile/:id"
-                        element={<ReviewerProfilePage />}
-                    />
+                    <Route path="profile/:id" element={<ReviewerProfilePage />} />
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="balance/" element={<Balance />} />
@@ -94,7 +90,7 @@ function App() {
                     <Route path="settings/" element={<SettingsReviewer />} />
                 </Route>
 
-                {/*//* Drawer */}
+                {/* Drawer Routes */}
                 <Route path="drawer/" element={<DrawerLayout />}>
                     <Route path="" element={<DrawerHomePage />} />
                 </Route>
