@@ -248,7 +248,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                             name="services"
                             value="service1"
                             onChange={formik.handleChange}
-{/*                             onBlur={formik.handleBlur} */}
                             checked={formik.values.services.includes('service1')}
                             className="mr-2 bg-[#C29062] ronded-full"
                             disabled={mode !== "reviewer"}
@@ -262,7 +261,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                             name="services"
                             value="service2"
                             onChange={formik.handleChange}
-{/*                             onBlur={formik.handleBlur} */}
                             checked={formik.values.services.includes('service2')}
                             className="mr-2"
                             disabled={mode !== "reviewer"}
@@ -276,7 +274,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                             name="services"
                             value="service3"
                             onChange={formik.handleChange}
-{/*                             onBlur={formik.handleBlur} */}
                             checked={formik.values.services.includes('service3')}
                             className="mr-2"
                             disabled={mode !== "reviewer"}
