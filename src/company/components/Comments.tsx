@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Comment from "./comment";
+import Comment from "./Comment";
 import { IoSend } from "react-icons/io5"; 
 
 interface User {
