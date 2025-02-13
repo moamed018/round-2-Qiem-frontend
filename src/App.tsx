@@ -33,6 +33,7 @@ import Balance from "./company/pages/Balance";
 import CompanyPaidProjects from "./company/pages/CompanyPaidProjects";
 
 import "./App.css";
+import ReviewerProfilePage from "./reviewer/pages/ReviewerProfilePage";
 
 function App() {
   return (
@@ -71,7 +72,8 @@ function App() {
                     <Route path="" element={<CompanyHomePage />} />
                     <Route path="properties/" element={<CompanyHomePage />} />
                     <Route path="properties/:id" element={<PropertyPage />} />
-                    <Route path="add/" element={<AddReviewerDrawer />} />
+                    <Route path="add-team/" element={<AddReviewerDrawer />} />
+                    <Route path="profile/:id" element={<ReviewerProfilePage />} />
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="balance/" element={<Balance />} />

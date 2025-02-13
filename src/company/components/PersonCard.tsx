@@ -2,7 +2,8 @@ import React from "react";
 import avatar from '/src/assets/avatar.png';
 import ButtonCard from "./ButtonCard";
 
-interface PersonCardProps {
+export interface PersonCardProps {
+  id: number;
   name: string;
   additionalInfo: string;
   type: string;
@@ -13,7 +14,7 @@ interface PersonCardProps {
 
 const PersonCard: React.FC<PersonCardProps> = ({ name, additionalInfo, type, onEdit, onDelete, onSend }) => {
   return (
-    <div className="border border-[#D1E8E2] p-3 rounded-lg shadow-md bg-white flex flex-col h-ful  relative ">
+    <div className="border border-[#D1E8E2] p-3 rounded-lg shadow-md bg-white flex flex-col h-full relative ">
         <div className="flex h-full items-center">
             <img className="rounded-lg shadow-md h-[97px] w-[97px] " src={avatar} alt={name} />
             <div className="flex flex-col justify-start ps-3 pt-4">

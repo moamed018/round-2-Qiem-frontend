@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
 interface Option {
   id: number;
   name: string;
@@ -51,11 +48,6 @@ const DropDown: React.FC<DropDownProps> = ({ options, label, onSelect, selectedO
         <span className="absolute left-8 top-[18px] transform group-hover:text-white pointer-events-none">
           &#9660;
         </span>
-        
-          <span className="absolute left-30 top-[18px] transform pointer-events-none" >
-                <FontAwesomeIcon icon={faPlus} size="1x" className="text-[#C29062] group-hover:text-white" />
-              </span>
-        
       </div>
     </div>
   );
