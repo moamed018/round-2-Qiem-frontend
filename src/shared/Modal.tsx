@@ -14,7 +14,7 @@ interface ModalProps {
 
 const modalThemes = {
     confirmation: "bg-white text-[#C29062] border-[#C29062]",
-    info: "bg-white text-green-800 border-green-500",
+    info: "bg-white text-[#C29062] border-[#C29062]",
     error: "bg-red-500 text-white border-red-500",
 };
 
@@ -55,10 +55,9 @@ const Modal: React.FC<ModalProps> = ({
                     {Icon && (
                         <Icon
                             className={`text-7xl text-white p-4 rounded-full mb-4 ${
-                                type === "confirmation"
+                                type === "confirmation"|| type==="info"
                                     ? "bg-[#C29062]"
-                                    : type === "info"
-                                    ? "bg-green-500"
+                                    
                                     : ""
                             }`}
                         />
