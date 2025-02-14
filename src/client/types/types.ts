@@ -25,6 +25,7 @@ export interface RequestCardProps {
   cityName: string;
   propertyAddress: string;
   propertyDescription: string;
+  status?: string;
 }
 export interface RequestCardDetailsProps {
   id?: string;
