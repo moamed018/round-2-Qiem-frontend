@@ -39,7 +39,7 @@ function Sidebar({
     return (
         <aside
             dir="rtl"
-            className={`sidebar-main sticky top-0 lg:w-[265px] w-full px-[20px] lg:py-[50px] py-[20px] lg:bg-[#d1e8e24d] bg-[#ffffffdf] h-fit lg:min-h-screen min-h-fit`}
+            className={`sidebar-main sticky top-0 lg:w-[265px] w-[250px] px-[20px] lg:py-[50px] py-[20px] lg:bg-[#d1e8e24d] bg-[#ffffffdf] h-fit lg:min-h-screen min-h-fit`}
         >
             <h1 className="sidebar-header lg:text-center text-start flex justify-between items-center">
                 قيم-QAIM

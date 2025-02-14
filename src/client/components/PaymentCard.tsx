@@ -12,7 +12,7 @@ function PaymentCard({
       className={`flex flex-col gap-3 w-[350px] h-[450px] p-2 `}
       id="payment-card-container"
     >
-      <img src={HomeImage} alt="payment card image" className="rounded-md" />
+      <img src={HomeImage} alt="payment card image" className="rounded-md " />
       <div className="flex flex-col gap-4">
         <h2 id="payment-card-address">عنوان العقار: {propertyAddress}</h2>
         <p id="payment-card-price">السعر: {propertyPrice} ريال</p>
