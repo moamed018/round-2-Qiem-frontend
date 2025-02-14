@@ -4,7 +4,7 @@ interface ButtonProps {
   label: string; 
   type?: "button"| "reset" | "submit";
   baseStyle?: string; 
-  onClick: () => void; 
+  onClick?: () => void; 
 }
 
 const ButtonCard: React.FC<ButtonProps> = ({ label, baseStyle, onClick, type }) => {

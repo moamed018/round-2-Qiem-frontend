@@ -1,38 +1,6 @@
 import React, { useState } from "react";
 import { IoNotificationsSharp } from "react-icons/io5";
-
-const notifications = [
-    {
-        id: 1,
-        title: "تخفيضات لفترة محدودة",
-        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
-        image: "/src/assets/samsungcompany.jpeg",
-    },
-    {
-        id: 2,
-        title: "سعداء بشراكتنا",
-        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
-        image: "/src/assets/samsungcompany.jpeg",
-    },
-    {
-        id: 3,
-        title: "طلب تعيين معين",
-        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
-        image: "/src/assets/samsungcompany.jpeg",
-    },
-    {
-        id: 4,
-        title: "تم ارسال تقرير التقييم",
-        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
-        image: "/src/assets/samsungcompany.jpeg",
-    },
-    {
-        id: 5,
-        title: "تم سداد رسوم المعاين",
-        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
-        image: "/src/assets/samsungcompany.jpeg",
-    },
-];
+import { notifications } from "../../company/data";
 
 const NotificationDropdown: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);

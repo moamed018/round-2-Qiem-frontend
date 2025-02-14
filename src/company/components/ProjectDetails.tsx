@@ -55,7 +55,7 @@ export default function ProjectDetails({
                 >
                     <img
                         className="w-full h-full object-cover transition-all duration-300 hover:scale-110 opacity-90 hover:opacity-100"
-                        src={property?.image}
+                        src={property?.image} alt="gallery"
                     />
                 </div>
                 {showGallery &&
@@ -66,7 +66,7 @@ export default function ProjectDetails({
                         >
                             <img
                                 className="w-full h-full object-cover transition-all duration-300 hover:scale-110 scale-105 opacity-90 hover:opacity-100"
-                                src={e}
+                                src={e} alt="gallery"
                             />
                         </div>
                     ))}

@@ -15,7 +15,7 @@ function ShowRequest() {
         <div className=' flex mb-8 max-sm:mb-48  max-md:mb-16 max-lg:mb-12 '>
         {/* image */}
         <div className='ml-8 w-1/6'>
-          <img src={samsungcompany} className='rounded-sm h-full '/>
+          <img src={samsungcompany} className='rounded-sm h-full ' alt='samsungcompany'/>
         </div>
         {/*== image ==*/}
          

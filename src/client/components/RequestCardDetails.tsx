@@ -40,7 +40,7 @@ const RequestCardDetails: React.FC<RequestCardDetailsProps> = ({
           {email}
         </a>
 
-        <p className="font-semibold block">تكلفة التقييم</p>
+        <p className="request-card-details-header">تكلفة التقييم</p>
         <p className="block">{evaluationCost} ريال سعودي</p>
       </div>
     </div>

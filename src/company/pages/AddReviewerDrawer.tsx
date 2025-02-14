@@ -3,11 +3,11 @@ import React, { useState } from "react";
 import DropDown from "../components/DropDown";
 import PersonCard from "../components/PersonCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Report from "../../reviewer/components/Report"
 import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
 import Modal from "../../shared/Modal";
 import { FaCheck } from "react-icons/fa"; 
 import { Link } from "react-router-dom";
+import { drawerOptions, reviewerOptions } from "../data";
 interface Option {
   id: number;
   name: string;
@@ -19,28 +19,7 @@ const AddReviewerDrawer: React.FC = () => {
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [modalMessage, setModalMessage] = useState("");
-  const drawerOptions = [
-    { id: 1, name: " أحمد محمد", 
-      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.",
-      type: "drawer" ,
-      },
-
-    { id: 2, name: "محمد علي", 
-      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", 
-      type: "drawer",
-      }
-  ];
-
-  const reviewerOptions = [
-    { id: 3,
-      name: "هشام سعد",
-      additionalInfo: "مهندس مدني محترف بخبرة كبير في مجال الإنشاءات",
-      type: "reviewer" },
-    { id: 4,
-      name: "محمد علي",
-      additionalInfo: "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف", 
-      type: "drawer" }
-  ];
+  
   
   const handleDelete = (id: number) => {
     setSelectedOptions(selectedOptions.filter((item) => item.id !== id));
@@ -99,7 +78,6 @@ const AddReviewerDrawer: React.FC = () => {
         type="info"
         
       />
-      <Report mode="drawer"/>
     </div>
 
   );

@@ -19,7 +19,7 @@ const PropertyItem: React.FC<BuildingInfo> = ({
             <div dir="" className="container-items w-full rounded-sm  ">
                 {/* image-content */}
                 <div className='p-1 relative w-full h-56'>
-                    <img src={buildingImage} className='w-full h-full'/>
+                    <img src={buildingImage} className='w-full h-full' alt={buildingTitle}/>
                     <p className='paid w-20 p-2 text-center rounded-full absolute top-4 left-4 '>مدفوع</p>
                 </div>
                 {/*== image ==*/}

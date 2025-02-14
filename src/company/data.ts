@@ -9,11 +9,13 @@ import GalleryImage1 from "../assets/company/gallery1.png";
 import GalleryImage2 from "../assets/company/gallery2.png";
 import GalleryImage3 from "../assets/company/gallery3.png";
 import GalleryImage4 from "../assets/company/gallery4.png";
+import { Review } from "./components/Comments";
 
 const data = [
     {
         id: 1,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage1,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -56,7 +58,8 @@ const data = [
     },
     {
         id: 2,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage2,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -99,7 +102,8 @@ const data = [
     },
     {
         id: 3,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage3,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -142,7 +146,8 @@ const data = [
     },
     {
         id: 4,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage4,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -185,7 +190,8 @@ const data = [
     },
     {
         id: 5,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage5,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -228,7 +234,8 @@ const data = [
     },
     {
         id: 6,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage6,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -271,7 +278,8 @@ const data = [
     },
     {
         id: 7,
-        title: "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
+        title:
+            "شقة للتمليك في شارع السند ، حي النرجس ، الرياض ، امارة منطقة الرياض",
         image: MainImage1,
         gallery: [GalleryImage1, GalleryImage2, GalleryImage3, GalleryImage4],
         statusOld: "جديد",
@@ -315,3 +323,120 @@ const data = [
 ];
 
 export default data;
+export const drawerOptions = [
+    {
+        id: 1,
+        name: " أحمد محمد",
+        additionalInfo:
+            "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.",
+        type: "drawer",
+    },
+
+    {
+        id: 2,
+        name: "محمد علي",
+        additionalInfo:
+            "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف",
+        type: "drawer",
+    },
+];
+
+export const reviewerOptions = [
+    {
+        id: 3,
+        name: "هشام سعد",
+        additionalInfo: "مهندس مدني محترف بخبرة كبير في مجال الإنشاءات",
+        type: "reviewer",
+    },
+    {
+        id: 4,
+        name: "محمد علي",
+        additionalInfo:
+            "رسام مصمم في الهندسة المعمارية , يقيم في الرياض , بيانات اخري.رسام محترف جدا محترف اوي محترف باحتراف",
+        type: "drawer",
+    },
+];
+
+export const allReviews: Review[] = [
+    {
+        id: 1,
+        content: "عقار رائع جدًا! أنصح به.",
+        user: {
+            id: 101,
+            name: "أحمد محمد",
+            avatar: "/src/assets/avatar.png",
+        },
+        projectId: "1",
+    },
+    {
+        id: 2,
+        content: "المكان نظيف ولكن السعر مرتفع قليلاً.",
+        user: {
+            id: 102,
+            name: "سارة خالد",
+            avatar: "/src/assets/avatar.png",
+        },
+        projectId: "2",
+    },
+    {
+        id: 3,
+        content: "موقع مثالي وقريب من جميع الخدمات.",
+        user: {
+            id: 103,
+            name: "خالد علي",
+            avatar: "/src/assets/avatar.png",
+        },
+        projectId: "1",
+    },
+];
+export const staticTeamData: Record<
+    string,
+    { id: number; name: string; type: string }[]
+> = {
+    "1": [
+        { id: 1, name: "أحمد محمد", type: "Reviewer" },
+        { id: 2, name: "سارة علي", type: "Drawer" },
+    ],
+    "2": [
+        { id: 3, name: "خالد حسن", type: "Reviewer" },
+        { id: 4, name: "منى سعيد", type: "Reviewer" },
+        { id: 5, name: "حسام بدر", type: "Drawer" },
+    ],
+    "3": [
+        { id: 6, name: "عبدالله فريد", type: "Drawer" },
+        { id: 7, name: "ياسمين عمر", type: "Reviewer" },
+    ],
+};
+
+export const notifications = [
+    {
+        id: 1,
+        title: "تخفيضات لفترة محدودة",
+        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
+        image: GalleryImage1,
+    },
+    {
+        id: 2,
+        title: "سعداء بشراكتنا",
+        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
+        image: GalleryImage1,
+    },
+    {
+        id: 3,
+        title: "طلب تعيين معين",
+        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
+        image: GalleryImage2,
+    },
+    {
+        id: 4,
+        title: "تم ارسال تقرير التقييم",
+        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
+        image: GalleryImage3,
+    },
+    {
+        id: 5,
+        title: "تم سداد رسوم المعاين",
+        description: "طلب التعيين. مبنى سكني مكون من ثلاث طوابق",
+        image: GalleryImage4,
+    },
+];

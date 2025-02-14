@@ -2,7 +2,7 @@ import "./style/Header.css";
 import  Avatar  from "../assets/avatar.png"
 
 import { IoIosSearch } from "react-icons/io";
-import NotificationDropdown from "../reviewer/components/notifications";
+import NotificationDropdown from "../reviewer/components/NotificationsDropdown";
 
 function Header() {
   return (
