@@ -1,7 +1,12 @@
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
-const CardPaymentForm = () => {
+
+interface CardPaymentFormProps {
+  handleIsBtnClicked: () => void;
+}
+
+const CardPaymentForm: React.FC<CardPaymentFormProps> = ({ handleIsBtnClicked }) => { 
   const formik = useFormik({
     initialValues: {
       nameOnCard: "",
@@ -23,7 +28,7 @@ const CardPaymentForm = () => {
     }),
     onSubmit: (values) => {
       console.log("Payment Info:", values);
-      alert("Payment Submitted Successfully!");
+      handleIsBtnClicked();
     },
   });
 
