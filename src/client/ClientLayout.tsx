@@ -6,7 +6,7 @@ function ClientLayout() {
     return (
         <div className="">
             <Header />
-            <div className="flex">
+            <div className="flex lg:flex-row flex-col">
                 <Sidebar
                     prenetPage="client"
                     showTeam={false}

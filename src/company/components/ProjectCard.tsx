@@ -24,11 +24,15 @@ export default function ProjectCard({
     if (status === "old") {
         statusStyle = "text-white bg-[#C29062] border-[#fff] border";
     }
-    if (status === "approved" || status === "paid") {
-        if (
-            project.statusApproved === "مقبول" ||
-            project.statusPaid === "مدفوع"
-        ) {
+    if (status === "approved") {
+        if (project.statusApproved === "مقبول") {
+            statusStyle = "text-white bg-[#45ED0A] border-[#fff] border";
+        } else {
+            statusStyle = "text-white bg-[#FF0000] border-[#fff] border";
+        }
+    }
+    if (status === "paid") {
+        if (project.statusPaid === "مدفوع") {
             statusStyle = "text-white bg-[#45ED0A] border-[#fff] border";
         } else {
             statusStyle = "text-white bg-[#FF0000] border-[#fff] border";
