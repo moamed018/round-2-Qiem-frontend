@@ -91,6 +91,7 @@ export const RequestCardDetails = [
     propertyAddress: "عقار في شارع السند، حي النرجس، الرياض، منطقة الرياض",
     propertyDescription:
       "تتكون من صالة ومجلس وثلاث غرف نوم ومطبخ وثلاث دورات مياه وتراس مطل على الشارع بمساحة 138م",
+    status: "مقبول",
   },
   {
     id: "2",
@@ -98,6 +99,7 @@ export const RequestCardDetails = [
     propertyAddress: "شقة في حي الشاطئ، جدة، منطقة مكة المكرمة",
     propertyDescription:
       "شقة فاخرة بإطلالة بحرية تتكون من غرفتين نوم وصالة ومطبخ ودورتين مياه بمساحة 120م",
+    status: "مرفوض",
   },
   {
     id: "3",
@@ -105,6 +107,7 @@ export const RequestCardDetails = [
     propertyAddress: "فيلا في حي النسيم، مكة المكرمة",
     propertyDescription:
       "فيلا راقية مكونة من طابقين، 5 غرف نوم، صالة واسعة، حديقة خاصة، ومسبح بمساحة 300م",
+    status: "مقبول",
   },
   {
     id: "4",
@@ -112,6 +115,7 @@ export const RequestCardDetails = [
     propertyAddress: "شقة في حي الفيصلية، الدمام، المنطقة الشرقية",
     propertyDescription:
       "شقة جديدة تتكون من 3 غرف نوم، مطبخ، وصالة بمساحة 150م",
+    status: "مرفوض",
   },
   {
     id: "5",
@@ -119,6 +123,7 @@ export const RequestCardDetails = [
     propertyAddress: "بيت مستقل في حي السلام، المدينة المنورة",
     propertyDescription:
       "بيت مستقل بمساحة 180م، يحتوي على 4 غرف نوم، مطبخ مجهز، وحديقة صغيرة",
+    status: "مقبول",
   },
   {
     id: "6",
@@ -126,6 +131,7 @@ export const RequestCardDetails = [
     propertyAddress: "شقة في حي اليرموك، الخبر، المنطقة الشرقية",
     propertyDescription:
       "شقة عصرية مع ديكورات فاخرة، تحتوي على غرفتين نوم وصالة بمساحة 110م",
+    status: "مرفوض",
   },
   {
     id: "7",
@@ -133,6 +139,7 @@ export const RequestCardDetails = [
     propertyAddress: "فيلا في حي الشهداء الشمالية، الطائف",
     propertyDescription:
       "فيلا دورين مع مسبح وحديقة، 5 غرف نوم، صالة، وغرفة خادمة بمساحة 250م",
+    status: "مقبول",
   },
   {
     id: "8",
@@ -140,6 +147,7 @@ export const RequestCardDetails = [
     propertyAddress: "بيت في حي السودة، أبها، منطقة عسير",
     propertyDescription:
       "بيت ريفي جميل بإطلالة جبلية، يتكون من 3 غرف نوم وصالة بمساحة 160م",
+    status: "مرفوض",
   },
   {
     id: "9",
@@ -147,6 +155,7 @@ export const RequestCardDetails = [
     propertyAddress: "شقة في حي المروج، تبوك",
     propertyDescription:
       "شقة واسعة تتكون من 4 غرف نوم، صالة، مطبخ، ودورتين مياه بمساحة 170م",
+    status: "مقبول",
   },
   {
     id: "10",
@@ -154,8 +163,10 @@ export const RequestCardDetails = [
     propertyAddress: "فيلا في حي الفايزية، بريدة، القصيم",
     propertyDescription:
       "فيلا أنيقة من طابقين تحتوي على 6 غرف نوم، مسبح داخلي، وصالة كبيرة بمساحة 350م",
+    status: "مرفوض",
   },
 ];
+
 
 export const PaymentsCardDetails = [
   {

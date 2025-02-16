@@ -6,7 +6,7 @@ function DrawerLayout() {
     return (
         <div className="">
             <Header />
-            <div className="flex">
+            <div className="flex lg:flex-row flex-col">
                 <Sidebar
                     prenetPage="drawer"
                     showTeam={false}

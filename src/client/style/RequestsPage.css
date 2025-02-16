@@ -1,7 +1,27 @@
 .property-request-card {
   box-shadow: 0 15px 15px 0 rgba(0, 0, 0, 0.25);
   border-radius: 5px;
+  position: relative;
 }
+.status-badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  min-width: 50px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: 1px solid white;
+  white-space: nowrap;
+}
+
+
 
 .request-actions {
   display: flex;
