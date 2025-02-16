@@ -4,9 +4,9 @@ import chatIcon from '../../assets/reviewer/chatIcon.png'
 import messageIcon from '../../assets/reviewer/mesageIcon.png'
 import whatsupIcon from '../../assets/reviewer/whatsupIcon.png'
 import telephoneIcon from '../../assets/reviewer/telephoneIcon.png'
-import { Navigate, useNavigate } from 'react-router'
-import { Link } from 'react-router-dom'
-import { useParams } from 'react-router'
+import {  useNavigate } from 'react-router'
+// import { Link } from 'react-router-dom'
+// import { useParams } from 'react-router'
 
 
 interface BuildingInfo{
@@ -98,6 +98,8 @@ const PropertyItem: React.FC<BuildingInfo> = ({
 
 
             </div>
+                </div>
+        
             {/*== container-items ==*/}
         
       </>

@@ -1,14 +1,14 @@
 import '../styles/style.css'
 import '../styles/ReportReviewer.css'
 import RadioButton from '../components/RadioButton'
-import { useRef, useState } from 'react'
+import {  useState } from 'react'
 import CheckBox from '../components/CheckBox'
 import { MdCloudUpload } from "react-icons/md";
 
 
 const ReportReviewer: React.FC = () => {
     const [selectedInfrastructure, setSelectedInfrastructure] = useState<string>("option1");
-    const [isCheckedServices, setIsCheckedServices] = useState<boolean>(false);
+    // const [isCheckedServices, setIsCheckedServices] = useState<boolean>(false);
     const [isSelectServices, setIsSelectedServices] = useState<string[]>([]);
     const [selectedReadyToUse,setSelectedReadyToUse] =useState<string>("ready");
 
