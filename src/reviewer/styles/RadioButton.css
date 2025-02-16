@@ -1,0 +1,48 @@
+/* اخفاء ال radio الافتراضي */
+.custom-radio {
+    display: none;
+
+}
+
+/* مساحه دائرة خارجيه */
+.custom-radio-label {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 18px;
+    position: relative;
+    padding-left: 0;
+    padding-right: 30px;
+    flex-direction: row-reverse;
+    direction: rtl;
+}
+
+/* انشاء دائرة خارجيه */
+.custom-radio-label::before {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #C29062;
+    transition: all 0.3s ease-in-out;
+}
+
+/*  عند تحديد ال radio اضافه دائره داخليه*/
+.custom-radio:checked+.custom-radio-label::after {
+    content: "";
+    position: absolute;
+    left: auto;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #C29062;
+}

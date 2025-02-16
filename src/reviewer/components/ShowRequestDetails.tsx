@@ -1,17 +1,30 @@
+import { useState } from 'react'
 import '../styles/ShowRequestDetails.css'
 import '../styles/style.css'
 
-function ShowRequestDetails() {
-  return (
-      <>
-          {/* requestDetailscontainer */}
-          <div className='requestDetailscontainer relative '>
+
+interface RequestDetailsprops{
+    onClose:()=>void
+}
+
+const ShowRequestDetails: React.FC<RequestDetailsprops> = ({ onClose }) => {
+    
+    return (
+        
+                <>
+                    {/* requestDetailscontainer */}
+          <div className='requestDetailscontainer' >
               
               {/* overlay */}
-              <div className='overlay'>
+              <div className='overlay' onClick={onClose}> 
                   
+                   
                   {/* requested-details-content */}
-                  <div className='requested-details-content w-2/6 text-center bg-white rounded-md max-sm:w-4/6 max-md:w-3/6 max-lg:3/6'>
+                    <div
+                        className='requested-details-content mt-10 w-2/6 text-center bg-white rounded-md max-sm:w-4/6 max-md:w-3/6 max-lg:3/6'
+                        // to prevent onClose to run when click the content
+                        onClick={(e) => e.stopPropagation()}
+                    >
                       
                   {/* building-image */}
                   <div className=' p-2  '>
@@ -77,8 +90,18 @@ function ShowRequestDetails() {
 
                     {/* Buttons Section */}
                     <div className='flex  button-section  justify-around mb-8 mt-2'>
-                    <button className='accept-request-btn rounded-md cursor-pointer w-2/5 '>قبول</button>
-                    <button className='refuse-request-btn rounded-md cursor-pointer w-2/5'>رفض</button>
+                            <button
+                                className='accept-request-btn rounded-md cursor-pointer w-2/5 '
+                            >
+                                قبول
+                            </button>
+
+                            <button
+                                className='refuse-request-btn rounded-md cursor-pointer w-2/5'
+                            >
+                                رفض
+                            </button>
+
                     </div>
                     {/*== Buttons Section ==*/}
          
@@ -94,9 +117,12 @@ function ShowRequestDetails() {
               
               
           </div>
-          {/*== requestDetailscontainer ==*/}
+            {/*== requestDetailscontainer ==*/}     
       </>
   )
+    
 }
+
+
 
 export default ShowRequestDetails

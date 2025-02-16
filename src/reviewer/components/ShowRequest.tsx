@@ -1,13 +1,22 @@
 
 import '../styles/ShowRequest.css'
 import samsungcompany from '../../assets/reviewer/samsungcompany.png'
-import ShowRequestDetails from './ShowRequestDetails'
+import { useState } from 'react'
+import ShowRequestDetails from './ShowRequestDetails';
+import AcceptRequest from './AcceptRequest';
+import RefuseRequest from './RefuseRequest';
 
-function ShowRequest() {
-  return (
+
+const ShowRequest: React.FC = () => {
+  const [showDetails, setShowDetails] = useState<boolean>(false);
+  const [accept, setAccept] = useState<boolean>(false);
+  const [refuse, setRefuse] = useState<boolean>(false);
+
+    return (
     <>
+      
       {/* <ShowRequestDetails/> */}
-      <div dir="rtl" className=" card-container w-full ">
+      <div dir="rtl" className="w-full ">
       {/* card-content */}
       <div className='card-content px-5 py-8 mt-16 mr-8 rounded-md w-5/6'>
         
@@ -33,21 +42,53 @@ function ShowRequest() {
         
         {/* Buttons Section */}
         <div className='flex  button-section gap-x-6'>
-          <button className='accept-request-btn rounded-md cursor-pointer '>قبول</button>
-          <button className='refuse-request-btn rounded-md cursor-pointer'>رفض</button>
-          <button className='watch-details-btn rounded-md cursor-pointer '>مشاهده التفاصيل</button>
+              <button
+                onClick={()=>setAccept(true)}
+                className='accept-request-btn rounded-md cursor-pointer '
+              >
+                قبول
+              </button>
+
+              <button
+                onClick={()=>setRefuse(true)}
+                className='refuse-request-btn rounded-md cursor-pointer'
+              >
+                رفض
+              </button>
+
+          <button
+             onClick={()=>setShowDetails(true)}   
+             
+                className='watch-details-btn rounded-md cursor-pointer '
+              >
+                مشاهده التفاصيل
+              </button>
         </div>
          {/*== Buttons Section ==*/}
 
       </div>
       {/*== card-content ==*/}
-    </div>
       
+           {/*عرض ال showRequsetDetails over the show request  */}
+          {showDetails && <ShowRequestDetails onClose={() => setShowDetails(false)} />}
+          
+          {/* show AcceptRequest over the showRequest */}
+          {accept && <AcceptRequest onClose={() => setAccept(false)} />}
+          
+          {/* show RefuseRequest over the showRequest */}
+          {refuse && <RefuseRequest onClose={()=>setRefuse(false)}/> }
+
+        </div>
+        
+        
+       
     </>
     
     
   )
+
 }
+
 
 export default ShowRequest
 

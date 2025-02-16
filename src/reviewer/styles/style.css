@@ -32,5 +32,38 @@
     top: 0;
     left: 0;
     position: absolute;
-    background: #000000B2;
+    background-color: rgb(0, 0, 0, 0.5); 
+    /* display: flex; */
+    /* justify-content: center;  */
+     z-index: 10; 
+}
+
+.main-shadow{
+    box-shadow: 0px 4px 13px 8px #0000000D;
+}
+
+.bg-color{
+    background-color: var(--main-color, #C29062);
+}
+
+.center-element{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+}
+
+.position-element{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    text-align: center;
+
+}
+
+.border-maincolor{
+    border: 1px solid #C29062;
 }

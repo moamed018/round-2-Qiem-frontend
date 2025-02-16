@@ -1,7 +1,5 @@
 .sidebar-main {
   background-color: rgba(209, 232, 226, 0.3);
-  width: 265px;
-  height: 100vh;
   padding: 50px 20px;
   display: flex;
   flex-direction: column;
