@@ -1,6 +1,6 @@
 import '../styles/style.css'
 import PropertyItem from './PropertyItem';
-import building1 from '../../assets/reviewer/building1.png'
+// import building1 from '../../assets/reviewer/building1.png'
 
 
 function ShowAllProperty() {
