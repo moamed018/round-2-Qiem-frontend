@@ -49,7 +49,7 @@ const validationSchema = Yup.object({
     propertyImages: Yup.mixed().required("يجب رفع صورة"),
 });
 
-const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mode }) => {
+const ReportForm: React.FC<{ mode: string}> = ({ mode }) => {
     const [file, setFile] = useState<File | null>(null);
         
     const formik = useFormik({
@@ -121,6 +121,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     value={formik.values.propertyCode}
                     className="w-full border border-[#D1E8E2] rounded p-2"
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -134,6 +137,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     value={formik.values.evaluationDate}
                     className="w-full border border-[#D1E8E2] rounded p-2"
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -146,6 +152,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     value={formik.values.propertyDescription}
                     className="w-full border border-[#D1E8E2] rounded p-2"
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -158,6 +167,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     value={formik.values.locationDescription}
                     className="w-full border border-[#D1E8E2] rounded p-2"
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -173,6 +185,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     disabled={mode !== "reviewer"}
 
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -187,6 +202,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     className="w-full border border-[#D1E8E2] rounded p-2"
                     disabled={mode !== "reviewer"}
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
 
             <div>
@@ -201,6 +219,9 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     className="w-full border border-[#D1E8E2] rounded p-2"
                     disabled={mode !== "reviewer"}
                 />
+                {formik.touched.infrastructure && formik.errors.infrastructure && (
+                    <p className="text-red-500 text-sm">{formik.errors.infrastructure}</p>
+                )}
             </div>
             <div>
                 <label className="block text-gray-700">البنية التحتية</label>
@@ -283,7 +304,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                         />
                         <label className="ms-2">خدمة 3</label>
                     </div>
-                    {/* يمكنك إضافة المزيد من الخدمات كما تحتاج */}
                 </div>
                 {formik.touched.services && formik.errors.services && (
                     <p className="text-red-500 text-sm">{formik.errors.services}</p>
@@ -434,7 +454,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-                {/* الحدود الشمالية */}
                 <div>
                     <label className="block text-[#C29062]">شمال</label>
                     <input
@@ -466,7 +485,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     )}
                 </div>
 
-                {/* الحدود الجنوبية */}
                 <div>
                     <label className="block text-[#C29062]">جنوب</label>
                     <input
@@ -498,7 +516,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     )}
                 </div>
 
-                {/* الحدود الشرقية */}
                 <div>
                     <label className="block text-[#C29062]">شرق</label>
                     <input
@@ -530,7 +547,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     )}
                 </div>
 
-                {/* الحدود الغربية */}
                 <div>
                     <label className="block text-[#C29062]">غرب</label>
                     <input
@@ -772,7 +788,7 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-                {/* الفحص */}
+
                 <div>
                     <label className="block text-gray-700">المعاينة </label>
                     <input
@@ -791,7 +807,6 @@ const ReportForm: React.FC<{ mode: "reviewer" | "drawer" | "company" }> = ({ mod
                     )}
                 </div>
 
-                {/* الملاحظات العامة */}
                 <div>
                     <label className="block text-gray-700">ملاحظات المعاينة</label>
                     <textarea
