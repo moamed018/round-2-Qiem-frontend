@@ -25,6 +25,7 @@ export interface RequestCardProps {
   cityName: string;
   propertyAddress: string;
   propertyDescription: string;
+  status?: string;
 }
 export interface RequestCardDetailsProps {
   id?: string;
@@ -42,4 +43,12 @@ export interface OfferStatusProps {
   onClose: () => void;
   message: string;
   status: string;
+}
+
+export interface PaymentsCardProps {
+  id?: string;
+  propertyAddress: string;
+  propertyDescription: string;
+  propertyPrice: string;
+  
 }

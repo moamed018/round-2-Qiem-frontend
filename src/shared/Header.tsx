@@ -1,7 +1,8 @@
 import "./style/Header.css";
-import { IoNotificationsSharp } from "react-icons/io5";
+import  Avatar  from "../assets/avatar.png"
 
 import { IoIosSearch } from "react-icons/io";
+import NotificationDropdown from "../reviewer/components/NotificationsDropdown";
 
 function Header() {
   return (
@@ -26,14 +27,13 @@ function Header() {
       <div className="flex items-center gap-8">
         {/* Notifications Icon*/}
         <div className="notifications-icon-container">
-          <IoNotificationsSharp className=" notifications-icon" />
-        </div>
+        <NotificationDropdown/>        </div>
         {/* Avatar */}
         <div className="flex gap-4  items-center">
           <h2 className="text-lg text-white username">Ahmed Mohamed</h2>
           <img
             className="w-[50px] h-[50px] rounded-full "
-            src="/src/assets/avatar.png"
+            src={Avatar}
             alt="avatar"
           />
         </div>

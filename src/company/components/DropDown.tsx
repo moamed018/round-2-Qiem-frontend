@@ -1,7 +1,4 @@
 import React, { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
-
 interface Option {
   id: number;
   name: string;
@@ -35,7 +32,7 @@ const DropDown: React.FC<DropDownProps> = ({ options, label, onSelect, selectedO
         <select
           onChange={handleSelectChange}
           value={selectedValue}
-          className="w-full p-3 text-lg focus:outline-none bg-[#d1e8e24d] border-b border-[#d8dfeb] group-hover:bg-gradient-to-r from-[#C29062] to-black group-hover:text-white transition-all duration-300 appearance-none"
+          className="w-full p-3 text-lg focus:outline-none bg-[#d1e8e24d] border-b border-[#d8dfeb] group-hover:bg-gradient-to-r from-[#C29062] to-black group-hover:text-white active:bg-linear-to-r active:from-[#000] active:to-[#C29062]  transition-all duration-300 appearance-none"
           aria-label={label}
         >
           <option value="" className="text-black">{label}</option>
@@ -51,11 +48,6 @@ const DropDown: React.FC<DropDownProps> = ({ options, label, onSelect, selectedO
         <span className="absolute left-8 top-[18px] transform group-hover:text-white pointer-events-none">
           &#9660;
         </span>
-        
-          <span className="absolute left-30 top-[18px] transform pointer-events-none" >
-                <FontAwesomeIcon icon={faPlus} size="1x" className="text-[#C29062] group-hover:text-white" />
-              </span>
-        
       </div>
     </div>
   );

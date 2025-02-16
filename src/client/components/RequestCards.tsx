@@ -16,6 +16,7 @@ function RequestCards({ onSelectCard }: RequestCardsProps) {
               cityName={card.cityName}
               propertyAddress={card.propertyAddress}
               propertyDescription={card.propertyDescription}
+              status={card.status}
             />
           </div>
         ))}

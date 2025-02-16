@@ -1,0 +1,94 @@
+/* Payment Card */
+#payment-card-container {
+  position: relative;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#payment-card-container::before {
+  position: absolute;
+  content: "مدفوع";
+  background-color: green;
+  top: 20px;
+  left: 20px;
+  min-width: 50px; /* Adjusted for Arabic text */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border: 1px solid white;
+  white-space: nowrap;
+}
+
+#payment-card-address {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 16px;
+  text-align: right;
+}
+
+#payment-card-price {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: right;
+  color: rgba(194, 144, 98, 1);
+}
+
+#payment-card-description {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 15px;
+  text-align: right;
+}
+
+#payment-card-container:hover {
+  background: linear-gradient(
+    rgba(194, 144, 98, 1),
+    rgba(194, 144, 98, 1),
+    rgba(0, 0, 0, 1)
+  );
+  color: white;
+}
+#payment-card-container:hover #payment-card-price {
+  color: white;
+}
+
+#pay-offer-header {
+  font-size: 25px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: right;
+  color: rgba(194, 144, 98, 1);
+}
+
+#pay-offer-price-container {
+  box-shadow: 0 2px 12px 7px rgba(0, 0, 0, 0.05);
+}
+
+#company-name-span {
+  color: rgba(194, 144, 98, 1);
+}
+#pay-offer-btn,
+#payment-form-btn
+ {
+  background-color: rgba(194, 144, 98, 1);
+}
+
+#pay-offer-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 6px 10px 0 rgba(194, 144, 98, 0.2);
+}
+
+#payment-form-btn{
+cursor: pointer;
+}
+

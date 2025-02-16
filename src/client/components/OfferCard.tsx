@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/card.css";
-import AcceptOffer from "./OfferStatus";
+// import AcceptOffer from "./OfferStatus";
 
 interface CardProps {
   companyName: string;

@@ -1,10 +1,14 @@
 
 import '../styles/ShowRequest.css'
 import samsungcompany from '../../assets/reviewer/samsungcompany.png'
+
 import { useState } from 'react'
 import ShowRequestDetails from './ShowRequestDetails';
 import AcceptRequest from './AcceptRequest';
 import RefuseRequest from './RefuseRequest';
+=======
+// import ShowRequestDetails from './ShowRequestDetails'
+
 
 
 const ShowRequest: React.FC = () => {
@@ -24,7 +28,7 @@ const ShowRequest: React.FC = () => {
         <div className=' flex mb-8 max-sm:mb-48  max-md:mb-16 max-lg:mb-12 '>
         {/* image */}
         <div className='ml-8 w-1/6'>
-          <img src={samsungcompany} className='rounded-sm h-full '/>
+          <img src={samsungcompany} className='rounded-sm h-full ' alt='samsungcompany'/>
         </div>
         {/*== image ==*/}
          
