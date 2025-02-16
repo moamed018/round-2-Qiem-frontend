@@ -40,6 +40,8 @@ import DrawerHomePage from "./drawer/pages/DrawerHomePage";
 import Conditions from "./client/pages/Conditions";
 
 import "./App.css";
+import ReportPage from "./company/pages/ReportPage";
+import ReportFormPage from "./company/pages/ReportFormPage";
 
 function App() {
     return (
@@ -84,7 +86,9 @@ function App() {
                     <Route path="projects/" element={<ProjectsPage />} />
                     <Route path="projects/:id" element={<ProjectPage />} />
                     <Route path="projects/:id/comments" element={<CommentsPage />} />
-                    <Route path="/company/projects/:id/team-reports" element={<TeamReports />} />
+                    <Route path="projects/:id/team-reports" element={<TeamReports />} />
+                    <Route path="/company/projects/:projectId/team-reports/report/:memberId" element={<ReportPage />} />
+                    <Route path="/company/projects/:projectId/team-reports/:memberId/edit" element={<ReportFormPage />} />
                     <Route path="balance/" element={<Balance />} />
                     <Route path="terms-conditions" element={<Conditions />} />
                     <Route path="payments/" element={<CompanyPaidProjects />} />
