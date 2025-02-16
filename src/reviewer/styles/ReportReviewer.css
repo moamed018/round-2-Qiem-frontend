@@ -1,0 +1,15 @@
+.report-content input{
+    border: 2px solid var(--color-1, #D1E8E2);
+    color: #D9D9D9;
+}
+
+.report-content input[type=image]{
+    background: linear-gradient(90deg, #C29062 3.59%, #000000 181.03%);
+    text-align: center;
+}
+
+.input-container{
+    border: 2px solid var(--color-1, #D1E8E2);
+        color: #D9D9D9;
+
+}

@@ -1,92 +1,90 @@
-
+import '../styles/style.css'
 import PropertyItem from './PropertyItem';
+import building1 from '../../assets/reviewer/building1.png'
 
 
 function ShowAllProperty() {
    
 
   interface BuildingInfo{
-    buildingImage:string,
+    buildingImage: string,
+    buildName:string,
     buildingTitle: string,
-    buildingPrice: string,
-    buildingDescription:string,
+    companyName: string,
   }
 
 
-  const buildingsAvailable: (BuildingInfo)[] = [
+  const buildingsAvailable:BuildingInfo[] = [
     {
-      buildingImage: "/src/assets/reviewer/building1.png",
+      buildingImage:"/src/assets/reviewer/building1.png",
+      buildName:"عقار الشروق",
       buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
+      companyName:"شركة عقاركم",
     },
-     {
-      buildingImage: "/src/assets/reviewer/building2.png",
-      buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
-    },
+
       {
-      buildingImage: "/src/assets/reviewer/building3.png",
+      buildingImage:"/src/assets/reviewer/building2.png",
+      buildName:"عقار الشروق",
       buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
+      companyName:"شركة عقاركم",
     },
        {
-      buildingImage: "/src/assets/reviewer/building4.png",
+      buildingImage:"/src/assets/reviewer/building3.png",
+      buildName:"عقار الشروق",
       buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
+      companyName:"شركة عقاركم",
     },
         {
-      buildingImage: "/src/assets/reviewer/building5.png",
+      buildingImage:"/src/assets/reviewer/building4.png",
+      buildName:"عقار الشروق",
       buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
+      companyName:"شركة عقاركم",
     },
          {
-      buildingImage: "/src/assets/reviewer/building6.png",
+      buildingImage:"/src/assets/reviewer/building5.png",
+      buildName:"عقار الشروق",
       buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
-      buildingPrice: "85,000 ريال سعودي",
-      buildingDescription:
-        "تكون من صالة ومجلس وثلاث غرف نوم ومطبخ و ثلاث دورات مياه وتراس و مطل على الشارع  بمساحة 138م..........."
+      companyName:"شركة عقاركم",
     },
+          {
+      buildingImage:"/src/assets/reviewer/building6.png",
+      buildName:"عقار الشروق",
+      buildingTitle: "عقار في شارع السند ، حي النرجس ، الرياض ، منطقة الرياض",
+      companyName:"شركة عقاركم",
+    },
+       
+      
          
   ];
 
-  return (
+  return ( 
       <> 
           {/* property-container */}
-          <div>
-              <div className='main-propert-dir pr-2 pl-2'>
-              <h3 className=''>الرئيسية &gt; عقارات </h3>
-          </div>
+      <div className='w-full'>
+        
+              <div className='main-propert-dir p-4'> 
+              <h3 className='main-font main-color font-medium '>الرئيسية &gt; عقارات </h3>
+              </div>
 
           {/* show all property */}
           <div
-      className="w-full grid grid-row grid-cols-3 gap-x-8 gap-y-18 mt-18 mr-8 ml-8 mb-18 pr-2 pl-2 max-sm:grid-cols-1 max-sm:gap-y-8 max-md:grid-cols-2 max-md:gap-y-10 max-lg:grid-cols-2 max-lg:gap-y-14"
+      className=" grid grid-row grid-cols-3 gap-x-8 gap-y-18 mt-18 mr-8 ml-8 mb-18 pr-2 pl-2 max-sm:grid-cols-1 max-sm:gap-y-8 max-md:grid-cols-2 max-md:gap-y-10 max-lg:grid-cols-2 max-lg:gap-y-14"
     >
       {buildingsAvailable.map((build, index) => (
         <PropertyItem
             key={index}
             buildingImage={build.buildingImage}
+            buildName={build.buildName}
             buildingTitle={build.buildingTitle}
-            buildingPrice={build.buildingPrice}
-            buildingDescription={build.buildingDescription}
+            companyName={build.companyName}
           />
       )  
       )} 
           </div>
           {/*== show all property ==*/}
           
-          </div>
-          {/*== property-container ==*/}
-          
+      </div>
+      {/*== property-container ==*/}
       </>
   )
   

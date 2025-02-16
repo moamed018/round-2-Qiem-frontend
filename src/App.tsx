@@ -40,11 +40,25 @@ import DrawerHomePage from "./drawer/pages/DrawerHomePage";
 import Conditions from "./client/pages/Conditions";
 
 import "./App.css";
+import ShowRequest from "./reviewer/components/ShowRequest";
+import ReviewerHomePage from "./reviewer/pages/ReviewerHomePage";
+import ShowBalance from "./reviewer/components/ShowBalance";
+import PaidProjects from "./reviewer/components/PaidProjects";
+import EmptyHomePage from "./reviewer/components/EmptyHomePage";
+import ShowAllProperty from "./reviewer/components/ShowAllProperty";
+import AddComment from "./reviewer/components/AddComment";
+import ReportReviewer from "./reviewer/pages/ReportReviewer";
+import TermsAndConditionsReviewer from "./reviewer/components/TermConditionsReviewer";
+
+
+ 
 import ReportPage from "./company/pages/ReportPage";
 import ReportFormPage from "./company/pages/ReportFormPage";
 
 function App() {
-    return (
+  return (
+     
+
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />} />
@@ -95,11 +109,20 @@ function App() {
                     <Route path="settings/" element={<SettingsCompany />} />
                 </Route>
 
-                {/* Reviewer Routes */}
-                <Route path="reviewer/" element={""}>
-                    <Route path="settings/" element={<SettingsReviewer />} />
-                </Route>
 
+                {/*//* Reviewer */}
+            <Route path="reviewer/" element={<ReviewerHomePage />} >
+            <Route index element={<EmptyHomePage />} />
+            <Route path="show-all-property" element={< ShowAllProperty />} />
+            <Route path="add-comment" element={<AddComment />} />
+            <Route path="report-reviewer" element={<ReportReviewer />} />
+            <Route path="show-request" element={<ShowRequest />} />
+            <Route path="show-balance" element={<ShowBalance />} />
+            <Route path="paid-project" element={<PaidProjects />} />
+            <Route path="terms-conditions-reviewer" element={<TermsAndConditionsReviewer/>} />
+            <Route path="settings-reviewer" element={<SettingsReviewer />} />
+            </Route>
+              
                 {/* Drawer Routes */}
                 <Route path="drawer/" element={<DrawerLayout />}>
                     <Route path="terms-conditions" element={<Conditions />} />

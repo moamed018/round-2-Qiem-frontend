@@ -1,0 +1,15 @@
+.add-comment-container{
+    background: var(--background, #D1E8E24D);
+    height: fit-content;
+}
+
+.comment{
+    background: #F1F8F6;
+    top: 166px;
+    left: 828px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    width:fit-content;
+}
+

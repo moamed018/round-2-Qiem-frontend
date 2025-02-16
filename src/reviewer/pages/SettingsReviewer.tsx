@@ -72,9 +72,10 @@ export default function SettingsReviewer() {
         },
     });
     return (
-        <SettingsPage>
-            <form
-                className="lg:w-2/4 w-full mx-auto"
+        <SettingsPage >
+            <div className="w-full">
+                <form
+                className="w-full lg:w-2/4  mx-auto"
                 onSubmit={formik.handleSubmit}
             >
                 <div className="mb-6">
@@ -185,6 +186,7 @@ export default function SettingsReviewer() {
                     تعديل
                 </Button>
             </form>
+            </div>
             <Modal
                 isOpen={openModal === true}
                 Icon={FaCheck}

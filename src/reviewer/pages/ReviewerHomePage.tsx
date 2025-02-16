@@ -1,17 +1,20 @@
 
-import Header from '../../shared/Header'
+import { Outlet } from 'react-router'
 import ReviewerSidebar from '../components/ReviewerSidebar'
-import ShowRequest from '../components/ShowRequest'
-// import ShowRequestDetails from '../components/ShowRequestDetails'
+import ReviewerHeader from '../components/ReviewerHeader'
+
+
+
+
+
 
 function ReviewerHomePage() {
     return (
         <section>
-            <Header />
-            {/* <ShowRequestDetails/> */}
-            <main className="flex">
+            <ReviewerHeader />
+            <main className="flex items-stretch max-sm:gap-12">
                 <ReviewerSidebar />
-                <ShowRequest/>
+                <Outlet/>
             </main>
       </section>
       

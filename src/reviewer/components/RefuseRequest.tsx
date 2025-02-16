@@ -1,20 +1,20 @@
 import '../styles/style.css'
 import acceptImg from '../../assets/reviewer/assest4.png'
 import { useState } from 'react'
-import ConfirmAccept from './ConfirmAccept';
+import ConfirmRefuse from './ConfirmRefuse';
 
-interface AcceptRequestProps{
+interface RefuseRequestProps{
    onClose:()=>void,
   //  onConfirm:()=>void,
 }
 
-const AcceptRequest: React.FC<AcceptRequestProps> = ({ onClose }) => {
+const RefuseRequest: React.FC<RefuseRequestProps> = ({ onClose }) => {
   const [confirm, setConfirm] = useState<boolean>(false);
   
   return (
     <>
       {confirm ? 
-        <ConfirmAccept/>
+        <ConfirmRefuse/>
         
         :
         <>
@@ -24,7 +24,7 @@ const AcceptRequest: React.FC<AcceptRequestProps> = ({ onClose }) => {
         {/* accept-content */}
         <div className="position-element w-2/6 h-fit rounded-lg bg-white text-center p-8">
           <div className='w-3/6 m-auto '> <img src={acceptImg} className='w-full'/> </div>
-          <p className='main-font text-[22px] font-medium mt-4 mb-6'>سوف يتم قبول الطلب بالفعل </p>
+          <p className='main-font text-[22px] font-medium mt-4 mb-6'>سوف يتم رفض الطلب بالفعل </p>
 
           <div className='flex'>
             <button
@@ -55,5 +55,5 @@ const AcceptRequest: React.FC<AcceptRequestProps> = ({ onClose }) => {
   )
  }
 
-export default AcceptRequest
+export default RefuseRequest
 
