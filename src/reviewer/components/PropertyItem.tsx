@@ -98,6 +98,8 @@ const PropertyItem: React.FC<BuildingInfo> = ({
 
 
             </div>
+                </div>
+        
             {/*== container-items ==*/}
         
       </>
